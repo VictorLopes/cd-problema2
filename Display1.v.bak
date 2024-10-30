@@ -1,0 +1,19 @@
+module Display1 (
+	 input Bit0,
+	 input Bit1,
+	 input Bit2,
+    output QA
+);
+	wire NBit0, NBit1, NBit2;
+	
+	not(NBit0, Bit0);
+	not(NBit1, Bit1);
+	not(NBit2, Bit2);
+	
+    // A
+	 and AND0_A(NBit0, NBit1, NBit2);
+	 and AND1_A(NBit0, Bit1, Bit2);
+	 and AND2_A(Bit0, NBit1, Bit2);
+	 or OR_A(QA, AND0_A, AND1_A, AND2_A);
+	 
+endmodule

@@ -1,0 +1,5 @@
+module(input A, output S);
+	and(S, A);
+	
+
+endmodule

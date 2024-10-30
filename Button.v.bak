@@ -1,0 +1,29 @@
+module Button (
+    input clk,
+	 input B,
+    output Q,
+);
+
+	// Debounce
+    wire Debounce;
+    ClockDivider10 DIV (
+        .clk(clk),
+        .reset(0'b0),
+		  .T(1'b0),
+        .Q(Debounce)
+    );
+	 
+	 
+	 T_FlipFlop TFF1 (
+        .T(T),
+        .clk(clk),
+        .reset(reset),
+        .Q(Q1)
+    );
+	 
+	 and(Debounce, B);
+
+	 
+	 and(WReset, Q0, Q1, Q2);
+
+endmodule
