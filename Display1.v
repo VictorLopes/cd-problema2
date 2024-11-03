@@ -1,56 +1,60 @@
-module Display1 (
-	 input Bit0,
-	 input Bit1,
-	 input Bit2,
-    output QA,
-	 output QB,
-	 output QC,
-	 output QD,
-	 output QE,
-	 output QF,
-	 output QG,
-	 output QP
-);
-	wire NBit0, NBit1, NBit2;
+module Display1 (A, B, C, segs[11:0]);
+	input A;
+	input B;
+	input C;
 	
-	not(NBit0, Bit0);
-	not(NBit1, Bit1);
-	not(NBit2, Bit2);
+	output [11:0] segs;
+	
+	wire NA, NB, NC;
+	
+	not(NA, A);
+	not(NB, B);
+	not(NC, C);
 	
 	// A
 	wire AND0_A, AND1_A;
 
-	and(AND0_A, NBit0, Bit1, Bit2);
-	and(AND1_A, Bit0, NBit1, Bit2);
-	or(QA, AND0_A, AND1_A);
+	and(AND0_A, NA, B, C);
+	and(AND1_A, A, NB, C);
+	or(segs[0], AND0_A, AND1_A);
 
 	// B
 	wire AND0_B, AND1_B, OR0_B;
 
-	and(AND0_B, NBit0, Bit1);
-	or(OR0_B, AND0_B, Bit1);
-	and(AND1_B, Bit0, NBit1);
-	or(QB, AND0_B, AND1_B);
+	and(AND0_B, NA, B);
+	or(OR0_B, AND0_B, B);
+	and(AND1_B, A, NB);
+	or(segs[1], AND0_B, AND1_B);
 
 	// C
-	and(QC, NBit0, Bit1);
+	and(segs[2], NA, B);
 
 	// D
-	and(QD, NBit0, NBit1, Bit2);
+	and(segs[3], NA, NB, C);
 
 	// E
-	and(QE, Bit0, NBit1, NBit2);
-
+	and(segs[4], A, NB, NC);
+	
+	// F ( nao precisa, ele vai ficar sempre ligado -> 0)
+	not (segs[5], 0);
 
 	// G
 	wire AND0_G, AND1_G, AND2_G;
-	and(AND0_G, NBit0, Bit1, NBit2);
-	and(AND1_G, NBit0, Bit1, Bit2);
-	and(AND2_G, Bit0, Bit1, NBit2);
-	or(QG, AND0_G, AND1_G, AND2_G);
+	and(AND0_G, NA, B, NC);
+	and(AND1_G, NA, B, C);
+	and(AND2_G, A, B, NC);
+	or(segs[6], AND0_G, AND1_G, AND2_G);
 
-	// P
-	or(QP, Bit0, Bit1, Bit2);
+	// Saida H ( nao precisa, ele vai ficar sempre ligado -> 0)
+	not (segs[7], 1);
+
+	// Saida I ( ponto sempre desligado)
+	not (segs[8], 0);
+	
+	// Desliga saidas de display( isso tem que mudar porque tem o de veloidade
+	not (segs[9], 0);
+	not (segs[10], 0);
+	not (segs[11], 0);
 	 
 	 
 endmodule

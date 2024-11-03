@@ -4,11 +4,13 @@ module T_FlipFlop (
     input reset,
     output reg Q
 );
-	always @(posedge clk or posedge reset) begin
-		if (reset) begin
-			Q <= 1'b0;
-		end else if (T) begin
-			Q <= ~Q;
-		end
+	always @(posedge clk) begin
+		if (reset)
+			Q <= 0;
+		else
+			if (T)
+				Q <= ~Q;
+		else
+				Q <= Q;
 	end
 endmodule

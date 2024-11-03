@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Oct 29 23:09:16 2024
+Fitter Status : Successful - Sat Nov 02 22:36:40 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Problema2
 Top-level Entity Name : Main
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 0 / 240 ( 0 % )
-Total pins : 11 / 80 ( 14 % )
+Total logic elements : 33 / 240 ( 14 % )
+Total pins : 18 / 80 ( 23 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

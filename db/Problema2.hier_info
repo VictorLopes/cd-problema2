@@ -1,15 +1,22 @@
 |Main
 clk => clk.IN2
-reset => reset.IN3
+reset => reset.IN4
 btn => btn.IN1
-A << Display1:display1.QA
-B << Display1:display1.QB
-C << Display1:display1.QC
-D << Display1:display1.QD
-E << Display1:display1.QE
-F << Display1:display1.QF
-G << Display1:display1.QG
-P << Display1:display1.QP
+segs[0] <= Display1:display1.segs
+segs[1] <= Display1:display1.segs
+segs[2] <= Display1:display1.segs
+segs[3] <= Display1:display1.segs
+segs[4] <= Display1:display1.segs
+segs[5] <= Display1:display1.segs
+segs[6] <= Display1:display1.segs
+segs[7] <= Display1:display1.segs
+segs[8] <= Display1:display1.segs
+segs[9] <= Display1:display1.segs
+segs[10] <= Display1:display1.segs
+segs[11] <= Display1:display1.segs
+leds[0] <= Q0.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Q2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button
@@ -35,37 +42,37 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -77,37 +84,37 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -119,51 +126,51 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -189,37 +196,37 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -231,37 +238,37 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -280,37 +287,37 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -322,108 +329,150 @@ Q <= T_FlipFlop:TFF5.Q
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|ClockDivider20:DIV|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|ClockDivider5:DIV1
+clk => clk.IN1
+reset => reset.IN5
+T => T.IN5
+Q <= T_FlipFlop:TFF5.Q
+
+
+|Main|ClockDivider5:DIV1|T_FlipFlop:TFF1
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|ClockDivider5:DIV1|T_FlipFlop:TFF2
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|ClockDivider5:DIV1|T_FlipFlop:TFF3
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|ClockDivider5:DIV1|T_FlipFlop:TFF4
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|ClockDivider5:DIV1|T_FlipFlop:TFF5
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Counter3Bits:C3Bits
 clk => clk.IN3
 reset => reset.IN1
-T => T.IN1
 Q0 <= Q0.DB_MAX_OUTPUT_PORT_TYPE
-Q1 <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= T_FlipFlop:TFF1.Q
 Q2 <= T_FlipFlop:TFF2.Q
 
 
 |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF0
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF1
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF2
-T => Q~reg0.ENA
+T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
+reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Display1:display1
-Bit0 => WideAnd1.IN0
-Bit0 => AND1_B.IN0
-Bit0 => WideAnd3.IN0
-Bit0 => WideAnd6.IN0
-Bit0 => WideOr1.IN0
-Bit0 => WideAnd0.IN0
-Bit0 => AND0_B.IN0
-Bit0 => comb.IN0
-Bit0 => WideAnd2.IN0
-Bit0 => WideAnd4.IN0
-Bit0 => WideAnd5.IN0
-Bit1 => WideAnd0.IN1
-Bit1 => AND0_B.IN1
-Bit1 => comb.IN1
-Bit1 => WideAnd4.IN1
-Bit1 => WideAnd5.IN1
-Bit1 => WideAnd6.IN1
-Bit1 => WideOr1.IN1
-Bit1 => WideAnd1.IN1
-Bit1 => AND1_B.IN1
-Bit1 => WideAnd2.IN1
-Bit1 => WideAnd3.IN1
-Bit2 => WideAnd0.IN2
-Bit2 => WideAnd1.IN2
-Bit2 => WideAnd2.IN2
-Bit2 => WideAnd5.IN2
-Bit2 => WideOr1.IN2
-Bit2 => WideAnd3.IN2
-Bit2 => WideAnd4.IN2
-Bit2 => WideAnd6.IN2
-QA <= comb.DB_MAX_OUTPUT_PORT_TYPE
-QB <= comb.DB_MAX_OUTPUT_PORT_TYPE
-QC <= comb.DB_MAX_OUTPUT_PORT_TYPE
-QD <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
-QE <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-QF <= <GND>
-QG <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-QP <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+A => WideAnd1.IN0
+A => AND1_B.IN0
+A => WideAnd3.IN0
+A => WideAnd6.IN0
+A => WideAnd0.IN0
+A => AND0_B.IN0
+A => comb.IN0
+A => WideAnd2.IN0
+A => WideAnd4.IN0
+A => WideAnd5.IN0
+B => WideAnd0.IN1
+B => AND0_B.IN1
+B => comb.IN1
+B => WideAnd4.IN1
+B => WideAnd5.IN1
+B => WideAnd6.IN1
+B => WideAnd1.IN1
+B => AND1_B.IN1
+B => WideAnd2.IN1
+B => WideAnd3.IN1
+C => WideAnd0.IN2
+C => WideAnd1.IN2
+C => WideAnd2.IN2
+C => WideAnd5.IN2
+C => WideAnd3.IN2
+C => WideAnd4.IN2
+C => WideAnd6.IN2
+segs[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= <VCC>
+segs[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+segs[7] <= <GND>
+segs[8] <= <VCC>
+segs[9] <= <VCC>
+segs[10] <= <VCC>
+segs[11] <= <VCC>
 
 

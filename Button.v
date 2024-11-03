@@ -11,14 +11,14 @@ module Button (
     ClockDivider10 DIV1 (
         .clk(clk),
         .reset(reset),
-		  .T(1'b0),
+		  .T(1),
         .Q(DQ1)
     );
 	 
 	 ClockDivider5 DIV2 (
 		.clk(DQ1),
 		.reset(reset),
-		.T(1'b0),
+		.T(1),
 		.Q(DQ2)
 	 );
 	 
