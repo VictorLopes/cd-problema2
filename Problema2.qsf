@@ -75,3 +75,7 @@ set_location_assignment PIN_42 -to reset
 set_location_assignment PIN_54 -to leds[2]
 set_location_assignment PIN_55 -to leds[1]
 set_location_assignment PIN_57 -to leds[0]
+set_global_assignment -name VERILOG_FILE Multex.v
+set_global_assignment -name VERILOG_FILE Speed.v
+set_global_assignment -name VERILOG_FILE Display2.v
+set_global_assignment -name VERILOG_FILE Displays.v

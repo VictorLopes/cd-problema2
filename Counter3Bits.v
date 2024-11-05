@@ -1,10 +1,7 @@
-
 module Counter3Bits (
     input clk,
     input reset,
-    output Q0,
-	 output Q1,
-	 output Q2
+    output [2:0] Q
 );
 
     wire WReset;
@@ -13,27 +10,27 @@ module Counter3Bits (
         .T(1),
         .clk(clk),
         .reset(reset),
-        .Q(Q0)
+        .Q(Q[0])
     );
 
     T_FlipFlop TFF1 (
-        .T(Q0),
+        .T(Q[0]),
         .clk(clk),
         .reset(WReset),
-        .Q(Q1)
+        .Q(Q[1])
     );
 	 
 	 wire ANDQ;
-	 and(ANDQ, Q0, Q1);
+	 and(ANDQ, Q[0], Q[1]);
 
 
     T_FlipFlop TFF2 (
         .T(ANDQ),
         .clk(clk),
         .reset(WReset),
-        .Q(Q2)
+        .Q(Q[2])
     );
 	 
-	 and(WReset, Q0, Q1, Q2);
+	 and(WReset, Q[0], Q[1], Q[2]);
 
 endmodule

@@ -3,14 +3,14 @@ module Main(
 	input reset,
 	input btn,
 	output [11:0] segs,
-	output [2:0] leds
+	output [2:0] Q
 );
 	
 	wire BtnBit0, BtnBit1;
 	
-	assign leds[0] = Q0;
+	/* assign leds[0] = Q0;
 	assign leds[1] = Q1;
-	assign leds[2] = Q2;
+	assign leds[2] = Q2;*/
 	
 	Button button(
 		.clk(clk),
@@ -20,38 +20,39 @@ module Main(
 		.Q2(BtnBit1)
 	);
 	
-	wire divided, divided1;
+	wire [3:0] spd;
 	
-	ClockDivider20 DIV (
-	  .clk(clk),
-	  .reset(reset),
-	  .T(1),
-	  .Q(divided)
+	Speed speed(
+		.reset(btn),
+		.clk(clk),
+		.speed(spd[3:0])
 	);
 	
-	ClockDivider5 DIV1 (
-	  .clk(divided),
-	  .reset(reset),
-	  .T(1),
-	  .Q(divided1)
+	wire divided_clk;
+	
+	Multex multex(
+		.A(BtnBit0),
+		.B(BtnBit1),
+		.clk(spd[2:0]),
+		.Q(divided_clk)
 	);
 	
 	wire Q0, Q1, Q2;
  
 	Counter3Bits C3Bits(
-		.clk(divided1),
+		.clk(divided_clk),
 		.reset(reset),
-		.Q0(Q0),
-		.Q1(Q1),
-		.Q2(Q2)
+		.Q(Q)
 	);
 	
 	
-	Display1 display1(
-		.A(Q0),
-		.B(Q1),
-		.C(Q2),
+	Displays displays(
+		.bits(Q),
+		.reset(reset),
+		.clk(clk),
 		.segs(segs[11:0])
 	);
+	
+	
 	
 endmodule

@@ -1,0 +1,16 @@
+module Displays(
+	input [2:0] bits,
+	output [11:0] segs
+);
+	
+	
+	Display1 display1(
+		.A(bits[0]),
+		.B(bits[1]),
+		.C(bits[2]),
+		.segs(segs[11:0])
+	);
+	
+	
+	
+endmodule

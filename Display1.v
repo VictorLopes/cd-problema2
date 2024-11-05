@@ -1,10 +1,10 @@
-module Display1 (A, B, C, segs[11:0]);
-	input A;
-	input B;
-	input C;
-	
-	output [11:0] segs;
-	
+module Display1 (
+	input A, 
+	input B, 
+	input C, 
+	input on, 
+	output [11:0] segs
+);		
 	wire NA, NB, NC;
 	
 	not(NA, A);
@@ -45,16 +45,19 @@ module Display1 (A, B, C, segs[11:0]);
 	and(AND2_G, A, B, NC);
 	or(segs[6], AND0_G, AND1_G, AND2_G);
 
-	// Saida H ( nao precisa, ele vai ficar sempre ligado -> 0)
+	// Saida H (nao precisa, ele vai ficar sempre ligado -> 0)
 	not (segs[7], 1);
 
 	// Saida I ( ponto sempre desligado)
 	not (segs[8], 0);
 	
-	// Desliga saidas de display( isso tem que mudar porque tem o de veloidade
+	// Desliga saidas de display(isso tem que mudar porque tem o de velocidade
 	not (segs[9], 0);
 	not (segs[10], 0);
 	not (segs[11], 0);
+	
+	// Desliga todos quando o clock for 0
+	
 	 
 	 
 endmodule

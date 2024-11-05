@@ -10,7 +10,7 @@ module T_FlipFlop (
 		else
 			if (T)
 				Q <= ~Q;
-		else
+			else
 				Q <= Q;
 	end
 endmodule

@@ -22,7 +22,8 @@ module Button (
 		.Q(DQ2)
 	 );
 	 
-	 
+	 wire ClockAndButton;
+	 and(ClockAndButton, DQ2, B);
 	 
 	 // Counter
 	 T_FlipFlop TFF1(
@@ -32,15 +33,10 @@ module Button (
         .Q(Q1)
     );
 	 
-	 // Multex
-	 wire NotClock, FF2Clock;
-	 not(NotClock, DQ2);
-	 and(FF2Clock, NotClock, B);
-	 
 	 
 	 T_FlipFlop TFF2(
         .T(Q1),
-        .clk(FF2Clock),
+        .clk(ClockAndButton),
         .reset(reset),
         .Q(Q2)
     );
