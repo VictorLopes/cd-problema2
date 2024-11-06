@@ -10,25 +10,25 @@ module Counter3Bits (
         .T(1),
         .clk(clk),
         .reset(reset),
-        .Q(Q[0])
+        .Q(Q[2])
     );
 
     T_FlipFlop TFF1 (
-        .T(Q[0]),
+        .T(Q[2]),
         .clk(clk),
         .reset(WReset),
         .Q(Q[1])
     );
 	 
 	 wire ANDQ;
-	 and(ANDQ, Q[0], Q[1]);
+	 and(ANDQ, Q[2], Q[1]);
 
 
     T_FlipFlop TFF2 (
         .T(ANDQ),
         .clk(clk),
         .reset(WReset),
-        .Q(Q[2])
+        .Q(Q[0])
     );
 	 
 	 and(WReset, Q[0], Q[1], Q[2]);

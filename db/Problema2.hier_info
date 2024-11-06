@@ -2,21 +2,21 @@
 clk => clk.IN3
 reset => reset.IN3
 btn => btn.IN2
-segs[0] <= Displays:displays.segs
-segs[1] <= Displays:displays.segs
-segs[2] <= Displays:displays.segs
-segs[3] <= Displays:displays.segs
-segs[4] <= Displays:displays.segs
-segs[5] <= Displays:displays.segs
-segs[6] <= Displays:displays.segs
-segs[7] <= Displays:displays.segs
-segs[8] <= Displays:displays.segs
-segs[9] <= Displays:displays.segs
-segs[10] <= Displays:displays.segs
-segs[11] <= Displays:displays.segs
-Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+segs[0] << Displays:displays.segs
+segs[1] << Displays:displays.segs
+segs[2] << Displays:displays.segs
+segs[3] << Displays:displays.segs
+segs[4] << Displays:displays.segs
+segs[5] << Displays:displays.segs
+segs[6] << Displays:displays.segs
+segs[7] << Displays:displays.segs
+segs[8] << Displays:displays.segs
+segs[9] << Displays:displays.segs
+segs[10] << Displays:displays.segs
+segs[11] << Displays:displays.segs
+Q[0] << Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] << Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] << Q[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button
@@ -443,9 +443,9 @@ Q <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 |Main|Counter3Bits:C3Bits
 clk => clk.IN3
 reset => reset.IN1
-Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= T_FlipFlop:TFF2.Q
 Q[1] <= T_FlipFlop:TFF1.Q
-Q[2] <= T_FlipFlop:TFF2.Q
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF0

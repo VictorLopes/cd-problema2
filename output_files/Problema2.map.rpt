@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema2
-Tue Nov 05 14:09:55 2024
+Wed Nov 06 00:28:27 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Nov 05 14:09:55 2024       ;
+; Analysis & Synthesis Status ; Successful - Wed Nov 06 00:28:27 2024       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Problema2                                   ;
 ; Top-level Entity Name       ; Main                                        ;
@@ -178,13 +178,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Total logic elements                        ; 56    ;
 ;     -- Combinational with no register       ; 9     ;
-;     -- Register only                        ; 1     ;
-;     -- Combinational with a register        ; 46    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 47    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 1     ;
 ;     -- 3 input functions                    ; 6     ;
-;     -- 2 input functions                    ; 48    ;
+;     -- 2 input functions                    ; 49    ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
@@ -200,8 +200,8 @@ https://fpgasoftware.intel.com/eula.
 ; I/O pins                                    ; 18    ;
 ; Maximum fan-out node                        ; btn   ;
 ; Maximum fan-out                             ; 29    ;
-; Total fan-out                               ; 177   ;
-; Average fan-out                             ; 2.39  ;
+; Total fan-out                               ; 178   ;
+; Average fan-out                             ; 2.41  ;
 +---------------------------------------------+-------+
 
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                          ; Entity Name    ; Library Name ;
 +----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+----------------+--------------+
-; |Main                            ; 56 (0)      ; 47           ; 0          ; 18   ; 0            ; 9 (0)        ; 1 (0)             ; 46 (0)           ; 0 (0)           ; 0 (0)      ; |Main                                                                                        ; Main           ; work         ;
+; |Main                            ; 56 (0)      ; 47           ; 0          ; 18   ; 0            ; 9 (0)        ; 0 (0)             ; 47 (0)           ; 0 (0)           ; 0 (0)      ; |Main                                                                                        ; Main           ; work         ;
 ;    |Button:button|               ; 18 (1)      ; 17           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 17 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Button:button                                                                          ; Button         ; work         ;
 ;       |ClockDivider10:DIV1|      ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1                                                      ; ClockDivider10 ; work         ;
 ;          |ClockDivider5:DIV1|    ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1                                   ; ClockDivider5  ; work         ;
@@ -233,9 +233,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |T_FlipFlop:TFF5|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5                                       ; T_FlipFlop     ; work         ;
 ;       |T_FlipFlop:TFF1|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF1                                                          ; T_FlipFlop     ; work         ;
 ;       |T_FlipFlop:TFF2|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF2                                                          ; T_FlipFlop     ; work         ;
-;    |Counter3Bits:C3Bits|         ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits                                                                    ; Counter3Bits   ; work         ;
+;    |Counter3Bits:C3Bits|         ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits                                                                    ; Counter3Bits   ; work         ;
 ;       |T_FlipFlop:TFF0|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF0                                                    ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:TFF1|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF1                                                    ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:TFF1|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF1                                                    ; T_FlipFlop     ; work         ;
 ;       |T_FlipFlop:TFF2|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF2                                                    ; T_FlipFlop     ; work         ;
 ;    |Displays:displays|           ; 6 (4)       ; 0            ; 0          ; 0    ; 0            ; 6 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Displays:displays                                                                      ; Displays       ; work         ;
 ;       |Display1:display1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Displays:displays|Display1:display1                                                    ; Display1       ; work         ;
@@ -410,7 +410,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 05 14:09:47 2024
+    Info: Processing started: Wed Nov 06 00:28:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -484,9 +484,9 @@ Info (21057): Implemented 74 device resources after synthesis - the final resour
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 56 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Tue Nov 05 14:09:55 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4698 megabytes
+    Info: Processing ended: Wed Nov 06 00:28:27 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
 
 

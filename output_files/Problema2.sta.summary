@@ -2,315 +2,319 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'Speed:speed|T_FlipFlop:div3|Q'
-Slack : -3.489
-TNS   : -11.077
-
-Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5|Q'
-Slack : -1.665
-TNS   : -4.132
-
 Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : -1.491
-TNS   : -2.685
+Slack : -3.245
+TNS   : -4.720
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
-Slack : 0.199
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
-Slack : 0.199
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
-Slack : 0.199
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
-Slack : 0.199
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : 0.200
-TNS   : 0.000
+Type  : Setup 'Speed:speed|T_FlipFlop:div3|Q'
+Slack : -2.906
+TNS   : -10.815
 
 Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF4|Q'
-Slack : 0.200
-TNS   : 0.000
+Slack : -2.515
+TNS   : -2.515
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : 0.206
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : 0.208
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : 0.210
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : 0.212
-TNS   : 0.000
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
+Slack : -2.475
+TNS   : -2.475
 
 Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF2|Q'
-Slack : 0.212
-TNS   : 0.000
+Slack : -2.443
+TNS   : -2.443
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : 0.456
-TNS   : 0.000
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
+Slack : -2.383
+TNS   : -2.383
 
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : 0.469
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : 0.551
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3|Q'
-Slack : 0.557
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
-Slack : 0.561
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1|Q'
-Slack : 0.566
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : 0.567
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
-Slack : 0.575
-TNS   : 0.000
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : -2.220
+TNS   : -2.220
 
 Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
-Slack : 0.593
-TNS   : 0.000
+Slack : -2.150
+TNS   : -2.150
 
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : 0.818
-TNS   : 0.000
+Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3|Q'
+Slack : -2.141
+TNS   : -2.141
+
+Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1|Q'
+Slack : -2.060
+TNS   : -2.060
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : -1.970
+TNS   : -1.970
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : -1.957
+TNS   : -1.957
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
+Slack : -1.892
+TNS   : -1.892
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : -1.887
+TNS   : -1.887
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
+Slack : -1.855
+TNS   : -1.855
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : -1.842
+TNS   : -1.842
+
+Type  : Setup 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5|Q'
+Slack : -1.696
+TNS   : -6.126
 
 Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
-Slack : 0.827
-TNS   : 0.000
+Slack : -1.569
+TNS   : -1.569
 
-Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : 0.833
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
+Slack : -1.533
+TNS   : -1.533
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
+Slack : -1.468
+TNS   : -1.468
+
+Type  : Setup 'clk'
+Slack : -1.440
+TNS   : -1.440
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
+Slack : -1.226
+TNS   : -1.226
+
+Type  : Setup 'btn'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
+Slack : -1.176
+TNS   : -1.176
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : -1.126
+TNS   : -1.126
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -1.122
+TNS   : -1.122
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -1.041
+TNS   : -1.041
+
+Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
+Slack : -0.751
+TNS   : -0.751
+
+Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : 0.457
 TNS   : 0.000
 
 Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
-Slack : 0.870
+Slack : 0.466
 TNS   : 0.000
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : 0.970
-TNS   : 0.000
-
-Type  : Setup 'clk'
-Slack : 1.156
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : 1.180
-TNS   : 0.000
-
-Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : 1.189
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
+Slack : 0.466
 TNS   : 0.000
 
 Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : 1.280
+Slack : 0.466
 TNS   : 0.000
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : 1.351
-TNS   : 0.000
-
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : 1.360
+Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
+Slack : 0.466
 TNS   : 0.000
 
 Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
-Slack : 1.366
+Slack : 0.467
 TNS   : 0.000
 
-Type  : Setup 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : 1.492
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : 0.800
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : 0.925
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
+Slack : 1.116
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : 1.204
+TNS   : 0.000
+
+Type  : Setup 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : 1.256
 TNS   : 0.000
 
 Type  : Hold 'clk'
-Slack : -1.799
-TNS   : -3.009
-
-Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5|Q'
-Slack : -1.612
-TNS   : -2.643
-
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : -1.546
-TNS   : -1.546
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
-Slack : -1.420
-TNS   : -1.420
+Slack : -1.807
+TNS   : -3.606
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : -1.414
-TNS   : -1.414
+Slack : -1.337
+TNS   : -1.337
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : -1.310
+TNS   : -1.310
+
+Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5|Q'
+Slack : -1.307
+TNS   : -1.307
+
+Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : -1.258
+TNS   : -1.258
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
+Slack : -1.170
+TNS   : -1.170
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -1.155
+TNS   : -1.155
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -1.154
+TNS   : -1.154
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : -1.405
-TNS   : -1.405
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : -1.334
-TNS   : -1.334
-
-Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : -1.243
-TNS   : -1.243
+Slack : -1.095
+TNS   : -1.095
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : -1.234
-TNS   : -1.234
+Slack : -1.041
+TNS   : -1.041
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : -1.024
-TNS   : -1.024
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : -0.979
+TNS   : -0.979
 
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
-Slack : -0.924
-TNS   : -0.924
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
+Slack : -0.907
+TNS   : -0.907
 
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : -0.887
-TNS   : -0.887
+Type  : Hold 'btn'
+Slack : -0.904
+TNS   : -0.904
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
-Slack : -0.881
-TNS   : -0.881
+Slack : -0.902
+TNS   : -0.902
 
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
-Slack : -0.872
-TNS   : -0.872
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : -0.854
+TNS   : -0.854
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
 Slack : -0.647
 TNS   : -0.647
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
+Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1|Q'
 Slack : -0.629
 TNS   : -0.629
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : -0.621
-TNS   : -0.621
-
-Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1|Q'
-Slack : -0.620
-TNS   : -0.620
-
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
+Slack : -0.624
+TNS   : -0.624
+
+Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3|Q'
+Slack : -0.619
+TNS   : -0.619
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
 Slack : -0.615
 TNS   : -0.615
 
-Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3|Q'
-Slack : -0.611
-TNS   : -0.611
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
+Slack : -0.600
+TNS   : -0.600
 
-Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : -0.605
-TNS   : -0.605
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -0.520
+TNS   : -0.520
 
 Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2|Q'
-Slack : -0.523
-TNS   : -0.523
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
-Slack : -0.521
-TNS   : -0.521
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
-Slack : -0.521
-TNS   : -0.521
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : -0.521
-TNS   : -0.521
-
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : -0.521
-TNS   : -0.521
-
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
 Slack : -0.520
 TNS   : -0.520
 
-Type  : Hold 'Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : -0.520
-TNS   : -0.520
+Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
+Slack : -0.511
+TNS   : -0.511
 
 Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
-Slack : -0.510
-TNS   : -0.510
+Slack : -0.511
+TNS   : -0.511
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : -0.266
-TNS   : -0.266
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
+Slack : -0.265
+TNS   : -0.265
 
 Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF2|Q'
-Slack : -0.266
-TNS   : -0.266
-
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
 Slack : -0.264
 TNS   : -0.264
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : -0.262
-TNS   : -0.262
-
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
-Slack : -0.260
-TNS   : -0.260
-
-Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4|Q'
-Slack : -0.254
-TNS   : -0.254
-
 Type  : Hold 'Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF4|Q'
+Slack : -0.264
+TNS   : -0.264
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : -0.261
+TNS   : -0.261
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1|Q'
 Slack : -0.254
 TNS   : -0.254
 
@@ -318,11 +322,7 @@ Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:
 Slack : -0.253
 TNS   : -0.253
 
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
-Slack : -0.253
-TNS   : -0.253
-
-Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2|Q'
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3|Q'
 Slack : -0.253
 TNS   : -0.253
 
@@ -330,13 +330,25 @@ Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:
 Slack : -0.253
 TNS   : -0.253
 
-Type  : Hold 'Speed:speed|T_FlipFlop:div3|Q'
-Slack : 1.078
-TNS   : 0.000
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
+Slack : -0.253
+TNS   : -0.253
+
+Type  : Hold 'Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4|Q'
+Slack : -0.241
+TNS   : -0.241
 
 Type  : Hold 'Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5|Q'
-Slack : 1.227
+Slack : 1.147
 TNS   : 0.000
+
+Type  : Hold 'Speed:speed|T_FlipFlop:div3|Q'
+Slack : 1.754
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'btn'
+Slack : -2.289
+TNS   : -2.289
 
 Type  : Minimum Pulse Width 'clk'
 Slack : -2.289
