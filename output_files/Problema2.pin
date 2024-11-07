@@ -76,10 +76,10 @@ GNDIO                        : 10        : gnd    :                   :         
 GNDINT                       : 11        : gnd    :                   :         :           :                
 clk                          : 12        : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
-Q[0]                         : 14        : output : 3.3-V LVTTL       :         : 1         : N              
-Q[2]                         : 15        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 14        :        :                   :         : 1         :                
+GND*                         : 15        :        :                   :         : 1         :                
 GND*                         : 16        :        :                   :         : 1         :                
-Q[1]                         : 17        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 17        :        :                   :         : 1         :                
 GND*                         : 18        :        :                   :         : 1         :                
 GND*                         : 19        :        :                   :         : 1         :                
 GND*                         : 20        :        :                   :         : 1         :                

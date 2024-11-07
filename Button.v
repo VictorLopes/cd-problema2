@@ -6,33 +6,17 @@ module Button (
 	 output Q2
 );
 
-	// Debounce
-    wire DQ1, DQ2;
-    ClockDivider10 DIV1 (
-        .clk(clk),
-        .reset(reset),
-		  .T(1),
-        .Q(DQ1)
-    );
-	 
-	 ClockDivider5 DIV2 (
-		.clk(DQ1),
-		.reset(reset),
-		.T(1),
-		.Q(DQ2)
-	 );
-	 
+	// Debounce (Clock entra com 15 divisões)	 
 	 wire ClockAndButton;
-	 and(ClockAndButton, DQ2, B);
+	 and(ClockAndButton, clk, B);
 	 
 	 // Counter
 	 T_FlipFlop TFF1(
         .T(B),
-        .clk(DQ2),
+        .clk(clk),
         .reset(reset),
         .Q(Q1)
     );
-	 
 	 
 	 T_FlipFlop TFF2(
         .T(Q1),

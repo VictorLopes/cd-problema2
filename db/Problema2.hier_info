@@ -1,163 +1,27 @@
 |Main
-clk => clk.IN3
-reset => reset.IN3
-btn => btn.IN2
-segs[0] << Displays:displays.segs
-segs[1] << Displays:displays.segs
-segs[2] << Displays:displays.segs
-segs[3] << Displays:displays.segs
-segs[4] << Displays:displays.segs
-segs[5] << Displays:displays.segs
-segs[6] << Displays:displays.segs
-segs[7] << Displays:displays.segs
-segs[8] << Displays:displays.segs
-segs[9] << Displays:displays.segs
-segs[10] << Displays:displays.segs
-segs[11] << Displays:displays.segs
-Q[0] << Q[0].DB_MAX_OUTPUT_PORT_TYPE
-Q[1] << Q[1].DB_MAX_OUTPUT_PORT_TYPE
-Q[2] << Q[2].DB_MAX_OUTPUT_PORT_TYPE
+clk => clk.IN1
+reset => reset.IN2
+btn => NBtn.IN2
+segs[0] <= Displays:displays.segs
+segs[1] <= Displays:displays.segs
+segs[2] <= Displays:displays.segs
+segs[3] <= Displays:displays.segs
+segs[4] <= Displays:displays.segs
+segs[5] <= Displays:displays.segs
+segs[6] <= Displays:displays.segs
+segs[7] <= Displays:displays.segs
+segs[8] <= Displays:displays.segs
+segs[9] <= Displays:displays.segs
+segs[10] <= Displays:displays.segs
+segs[11] <= Displays:displays.segs
 
 
 |Main|Button:button
 clk => clk.IN1
-reset => reset.IN4
+reset => reset.IN2
 B => B.IN1
 Q1 <= Q1.DB_MAX_OUTPUT_PORT_TYPE
 Q2 <= T_FlipFlop:TFF2.Q
-
-
-|Main|Button:button|ClockDivider10:DIV1
-clk => clk.IN1
-reset => reset.IN2
-T => T.IN2
-Q <= ClockDivider5:DIV2.Q
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider5:DIV2
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Button:button|T_FlipFlop:TFF1
@@ -175,196 +39,99 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Speed:speed
-reset => reset.IN4
+reset => reset.IN5
 clk => clk.IN1
 speed[0] <= speed[0].DB_MAX_OUTPUT_PORT_TYPE
 speed[1] <= speed[1].DB_MAX_OUTPUT_PORT_TYPE
-speed[2] <= T_FlipFlop:div4.Q
+speed[2] <= speed[2].DB_MAX_OUTPUT_PORT_TYPE
+speed[3] <= T_FlipFlop:div5.Q
 
 
-|Main|Speed:speed|ClockDivider20:div1
-clk => clk.IN1
-reset => reset.IN2
-T => T.IN2
-Q <= ClockDivider10:DIV2.Q
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1
+|Main|Speed:speed|ClockDivider10:div1
 clk => clk.IN1
 reset => reset.IN2
 T => T.IN2
 Q <= ClockDivider5:DIV2.Q
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1
 clk => clk.IN1
 reset => reset.IN5
 T => T.IN5
 Q <= T_FlipFlop:TFF5.Q
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF1
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF2
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF3
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF4
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF5
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2
 clk => clk.IN1
 reset => reset.IN5
 T => T.IN5
 Q <= T_FlipFlop:TFF5.Q
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF1
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF2
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF3
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF4
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2
-clk => clk.IN1
-reset => reset.IN2
-T => T.IN2
-Q <= ClockDivider5:DIV2.Q
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5
+|Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF5
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
@@ -413,7 +180,91 @@ reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Speed:speed|T_FlipFlop:div3
+|Main|Speed:speed|ClockDivider10:div3
+clk => clk.IN1
+reset => reset.IN2
+T => T.IN2
+Q <= ClockDivider5:DIV2.Q
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1
+clk => clk.IN1
+reset => reset.IN5
+T => T.IN5
+Q <= T_FlipFlop:TFF5.Q
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF1
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF2
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF3
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF4
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF5
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2
+clk => clk.IN1
+reset => reset.IN5
+T => T.IN5
+Q <= T_FlipFlop:TFF5.Q
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF1
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF2
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF3
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF4
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF5
 T => Q.OUTPUTSELECT
 clk => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
@@ -427,6 +278,13 @@ reset => Q.OUTPUTSELECT
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Main|Speed:speed|T_FlipFlop:div5
+T => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Main|Multex:multex
 A => Q1.IN0
 A => Q3.IN0
@@ -434,9 +292,12 @@ A => Q2.IN0
 B => Q2.IN1
 B => Q3.IN1
 B => Q1.IN1
-clk[0] => WideAnd0.IN3
-clk[1] => WideAnd1.IN3
-clk[2] => WideAnd2.IN3
+clk[0] => ~NO_FANOUT~
+clk[1] => WideAnd0.IN3
+clk[2] => WideAnd1.IN3
+clk[3] => WideAnd2.IN3
+Qbit1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Qbit2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 Q <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -470,128 +331,45 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Displays:displays
-bits[0] => bits[0].IN2
-bits[1] => bits[1].IN2
-bits[2] => bits[2].IN2
-reset => reset.IN3
-clk => clk.IN1
-segs[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+bits[0] => bits[0].IN1
+bits[1] => bits[1].IN1
+bits[2] => bits[2].IN1
+reset => ~NO_FANOUT~
+clk => temp[1].IN1
+clk => temp[2].IN1
+clk => temp[3].IN1
+clk => temp[4].IN1
+clk => temp[5].IN1
+clk => temp[6].IN1
+clk => temp[8].IN1
+clk => temp[10].IN1
+clk => temp[11].IN1
+clk => acao[0].IN1
+clk => acao[1].IN1
+clk => acao[2].IN1
+clk => acao[3].IN1
+clk => acao[4].IN1
+clk => acao[5].IN1
+clk => acao[6].IN1
+clk => acao[8].IN1
+clk => acao[10].IN1
+clk => acao[11].IN1
+clk => segs[7].DATAIN
+clk => segs[9].DATAIN
+v1 => v1.IN1
+v2 => v2.IN1
+segs[0] <= acao[0].DB_MAX_OUTPUT_PORT_TYPE
 segs[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-segs[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[7] <= clk.DB_MAX_OUTPUT_PORT_TYPE
 segs[8] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-segs[9] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[9] <= clk.DB_MAX_OUTPUT_PORT_TYPE
 segs[10] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[11] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1
-clk => clk.IN1
-reset => reset.IN2
-T => T.IN2
-Q <= ClockDivider5:DIV2.Q
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2
-clk => clk.IN1
-reset => reset.IN5
-T => T.IN5
-Q <= T_FlipFlop:TFF5.Q
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF1
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF4
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF5
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|T_FlipFlop:div2
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Main|Displays:displays|T_FlipFlop:div3
-T => Q.OUTPUTSELECT
-clk => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Main|Displays:displays|Display1:display1
@@ -607,6 +385,7 @@ A => WideAnd4.IN0
 A => WideAnd5.IN0
 B => WideAnd0.IN1
 B => AND0_B.IN1
+B => OR0_B.IN1
 B => comb.IN1
 B => WideAnd4.IN1
 B => WideAnd5.IN1
@@ -622,17 +401,16 @@ C => WideAnd5.IN2
 C => WideAnd3.IN2
 C => WideAnd4.IN2
 C => WideAnd6.IN2
-on => ~NO_FANOUT~
 segs[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[3] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
 segs[4] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
-segs[5] <= <VCC>
+segs[5] <= <GND>
 segs[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 segs[7] <= <GND>
 segs[8] <= <VCC>
-segs[9] <= <VCC>
+segs[9] <= <GND>
 segs[10] <= <VCC>
 segs[11] <= <VCC>
 
@@ -643,8 +421,6 @@ A => comb.DATAIN
 B => comb.DATAIN
 B => comb.DATAIN
 B => comb.DATAIN
-C => ~NO_FANOUT~
-on => ~NO_FANOUT~
 segs[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[1] <= <GND>
 segs[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
@@ -652,7 +428,7 @@ segs[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segs[6] <= <GND>
-segs[7] <= <VCC>
+segs[7] <= <GND>
 segs[8] <= <VCC>
 segs[9] <= <GND>
 segs[10] <= <VCC>

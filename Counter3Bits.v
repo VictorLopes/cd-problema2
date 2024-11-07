@@ -23,7 +23,6 @@ module Counter3Bits (
 	 wire ANDQ;
 	 and(ANDQ, Q[2], Q[1]);
 
-
     T_FlipFlop TFF2 (
         .T(ANDQ),
         .clk(clk),

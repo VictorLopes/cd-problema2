@@ -1,8 +1,7 @@
 module Display2 (
 	input A, 
 	input B, 
-	input C, 
-	input on, 
+
 	output [11:0] segs
 );	
 	and(segs[0], B); // A
@@ -21,7 +20,7 @@ module Display2 (
 	not (segs[8], 0);
 	
 	// Desliga saidas de display( isso tem que mudar porque tem o de veloidade
-	not (segs[7], 0);
+	not (segs[7], 1);
 	not (segs[10], 0);
 	not (segs[11], 0);
 	 

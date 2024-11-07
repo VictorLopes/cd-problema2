@@ -1,7 +1,9 @@
 module Multex (
     input A,
 	 input B,
-	 input [2:0] clk,
+	 input [3:0] clk,
+	 output Qbit1,
+	 output Qbit2,
 	 output Q
 );
 	
@@ -22,10 +24,13 @@ module Multex (
 	
 	wire M1, M2, M3;
 	
-	and(M1, Q1, NQ2, NQ3, clk[0]);
-	and(M2, NQ1, Q2, NQ3, clk[1]);
-	and(M3, NQ1, NQ2, Q3, clk[2]);
+	and(M1, Q1, NQ2, NQ3, clk[1]);
+	and(M2, NQ1, Q2, NQ3, clk[2]);
+	and(M3, NQ1, NQ2, Q3, clk[3]);
 	
 	or(Q, M1, M2, M3);
+	
+	and(Qbit1, Q1);
+	and(Qbit2, Q2);
 	
 endmodule

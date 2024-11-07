@@ -1,7 +1,8 @@
-module Display1Bkp(A, B, C,segs[11:0]);
+module Display1Bkp(A, B, C, on, segs[11:0]);
 	input A;
 	input B;
 	input C;
+	input on;
 
 	// output segA, segB, segC, segD, segE, segF, segG, segH, segI, des1, des2, des3;
 	output [11:0] segs;
@@ -50,7 +51,7 @@ module Display1Bkp(A, B, C,segs[11:0]);
 	
 
 	// saida H ( nao precisa, ele vai ficar sempre ligado -> 0)
-	not (segs[7], 1);
+	not (segs[7], on);
 
 	// saida I ( ponto sempre desligado)
 	not (segs[8], 0);

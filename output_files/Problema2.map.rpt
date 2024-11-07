@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema2
-Wed Nov 06 00:28:27 2024
+Thu Nov 07 14:02:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,18 +14,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "Displays:displays|T_FlipFlop:div3"
- 10. Port Connectivity Checks: "Displays:displays|T_FlipFlop:div2"
- 11. Port Connectivity Checks: "Displays:displays|ClockDivider10:div1"
+  9. Port Connectivity Checks: "Displays:displays|Display2:display2"
+ 10. Port Connectivity Checks: "Displays:displays|Display1:display1"
+ 11. Port Connectivity Checks: "Displays:displays"
  12. Port Connectivity Checks: "Counter3Bits:C3Bits|T_FlipFlop:TFF0"
- 13. Port Connectivity Checks: "Speed:speed|T_FlipFlop:div4"
- 14. Port Connectivity Checks: "Speed:speed|T_FlipFlop:div3"
- 15. Port Connectivity Checks: "Speed:speed|ClockDivider5:div2"
- 16. Port Connectivity Checks: "Speed:speed|ClockDivider20:div1"
- 17. Port Connectivity Checks: "Speed:speed"
- 18. Port Connectivity Checks: "Button:button|ClockDivider5:DIV2"
- 19. Port Connectivity Checks: "Button:button|ClockDivider10:DIV1"
- 20. Analysis & Synthesis Messages
+ 13. Port Connectivity Checks: "Speed:speed|T_FlipFlop:div5"
+ 14. Port Connectivity Checks: "Speed:speed|T_FlipFlop:div4"
+ 15. Port Connectivity Checks: "Speed:speed|ClockDivider10:div3"
+ 16. Port Connectivity Checks: "Speed:speed|ClockDivider5:div2"
+ 17. Port Connectivity Checks: "Speed:speed|ClockDivider10:div1"
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -52,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Nov 06 00:28:27 2024       ;
+; Analysis & Synthesis Status ; Successful - Thu Nov 07 14:02:51 2024       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Problema2                                   ;
 ; Top-level Entity Name       ; Main                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 56                                          ;
-; Total pins                  ; 18                                          ;
+; Total logic elements        ; 45                                          ;
+; Total pins                  ; 15                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -162,7 +160,6 @@ https://fpgasoftware.intel.com/eula.
 ; Counter3Bits.v                   ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/Counter3Bits.v   ;         ;
 ; Display1.v                       ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/Display1.v       ;         ;
 ; ClockDivider10.v                 ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/ClockDivider10.v ;         ;
-; ClockDivider20.v                 ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/ClockDivider20.v ;         ;
 ; Button.v                         ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/Button.v         ;         ;
 ; Multex.v                         ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/Multex.v         ;         ;
 ; Speed.v                          ; yes             ; User Verilog HDL File  ; C:/Users/vrlop/Dev/cd-problema2/Speed.v          ;         ;
@@ -176,107 +173,86 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 56    ;
-;     -- Combinational with no register       ; 9     ;
+; Total logic elements                        ; 45    ;
+;     -- Combinational with no register       ; 13    ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 47    ;
+;     -- Combinational with a register        ; 32    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1     ;
+;     -- 4 input functions                    ; 6     ;
 ;     -- 3 input functions                    ; 6     ;
-;     -- 2 input functions                    ; 49    ;
+;     -- 2 input functions                    ; 33    ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 56    ;
+;     -- normal mode                          ; 45    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 2     ;
+;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 47    ;
-; I/O pins                                    ; 18    ;
+; Total registers                             ; 32    ;
+; I/O pins                                    ; 15    ;
 ; Maximum fan-out node                        ; btn   ;
 ; Maximum fan-out                             ; 29    ;
-; Total fan-out                               ; 178   ;
-; Average fan-out                             ; 2.41  ;
+; Total fan-out                               ; 149   ;
+; Average fan-out                             ; 2.48  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                          ; Entity Name    ; Library Name ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+----------------+--------------+
-; |Main                            ; 56 (0)      ; 47           ; 0          ; 18   ; 0            ; 9 (0)        ; 0 (0)             ; 47 (0)           ; 0 (0)           ; 0 (0)      ; |Main                                                                                        ; Main           ; work         ;
-;    |Button:button|               ; 18 (1)      ; 17           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 17 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Button:button                                                                          ; Button         ; work         ;
-;       |ClockDivider10:DIV1|      ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1                                                      ; ClockDivider10 ; work         ;
-;          |ClockDivider5:DIV1|    ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1                                   ; ClockDivider5  ; work         ;
-;             |T_FlipFlop:TFF1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF3|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF4|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF5|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5                   ; T_FlipFlop     ; work         ;
-;          |ClockDivider5:DIV2|    ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2                                   ; ClockDivider5  ; work         ;
-;             |T_FlipFlop:TFF1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF3|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF4|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4                   ; T_FlipFlop     ; work         ;
-;             |T_FlipFlop:TFF5|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5                   ; T_FlipFlop     ; work         ;
-;       |ClockDivider5:DIV2|       ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2                                                       ; ClockDivider5  ; work         ;
-;          |T_FlipFlop:TFF1|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF1                                       ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF2|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF2                                       ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF3|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF3                                       ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF4|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF4                                       ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF5|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|ClockDivider5:DIV2|T_FlipFlop:TFF5                                       ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:TFF1|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF1                                                          ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:TFF2|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF2                                                          ; T_FlipFlop     ; work         ;
-;    |Counter3Bits:C3Bits|         ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits                                                                    ; Counter3Bits   ; work         ;
-;       |T_FlipFlop:TFF0|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF0                                                    ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:TFF1|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF1                                                    ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:TFF2|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF2                                                    ; T_FlipFlop     ; work         ;
-;    |Displays:displays|           ; 6 (4)       ; 0            ; 0          ; 0    ; 0            ; 6 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Displays:displays                                                                      ; Displays       ; work         ;
-;       |Display1:display1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Displays:displays|Display1:display1                                                    ; Display1       ; work         ;
-;    |Multex:multex|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Multex:multex                                                                          ; Multex         ; work         ;
-;    |Speed:speed|                 ; 27 (0)      ; 27           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 27 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed                                                                            ; Speed          ; work         ;
-;       |ClockDivider20:div1|      ; 20 (0)      ; 20           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 20 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1                                                        ; ClockDivider20 ; work         ;
-;          |ClockDivider10:DIV1|   ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1                                    ; ClockDivider10 ; work         ;
-;             |ClockDivider5:DIV1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1                 ; ClockDivider5  ; work         ;
-;                |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
-;             |ClockDivider5:DIV2| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2                 ; ClockDivider5  ; work         ;
-;                |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV1|ClockDivider5:DIV2|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
-;          |ClockDivider10:DIV2|   ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2                                    ; ClockDivider10 ; work         ;
-;             |ClockDivider5:DIV1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1                 ; ClockDivider5  ; work         ;
-;                |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV1|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
-;             |ClockDivider5:DIV2| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2                 ; ClockDivider5  ; work         ;
-;                |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
-;                |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider20:div1|ClockDivider10:DIV2|ClockDivider5:DIV2|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
-;       |ClockDivider5:div2|       ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2                                                         ; ClockDivider5  ; work         ;
-;          |T_FlipFlop:TFF1|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1                                         ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF2|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF2                                         ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF3|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3                                         ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF4|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF4                                         ; T_FlipFlop     ; work         ;
-;          |T_FlipFlop:TFF5|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5                                         ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:div3|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|T_FlipFlop:div3                                                            ; T_FlipFlop     ; work         ;
-;       |T_FlipFlop:div4|          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|T_FlipFlop:div4                                                            ; T_FlipFlop     ; work         ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                      ; Entity Name    ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+----------------+--------------+
+; |Main                         ; 45 (0)      ; 32           ; 0          ; 15   ; 0            ; 13 (0)       ; 0 (0)             ; 32 (0)           ; 0 (0)           ; 0 (0)      ; |Main                                                                    ; Main           ; work         ;
+;    |Button:button|            ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button                                                      ; Button         ; work         ;
+;       |T_FlipFlop:TFF1|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF1                                      ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:TFF2|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Button:button|T_FlipFlop:TFF2                                      ; T_FlipFlop     ; work         ;
+;    |Counter3Bits:C3Bits|      ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits                                                ; Counter3Bits   ; work         ;
+;       |T_FlipFlop:TFF0|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF0                                ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:TFF1|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF1                                ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:TFF2|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Counter3Bits:C3Bits|T_FlipFlop:TFF2                                ; T_FlipFlop     ; work         ;
+;    |Displays:displays|        ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Displays:displays                                                  ; Displays       ; work         ;
+;    |Multex:multex|            ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Multex:multex                                                      ; Multex         ; work         ;
+;    |Speed:speed|              ; 27 (0)      ; 27           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 27 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed                                                        ; Speed          ; work         ;
+;       |ClockDivider10:div1|   ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1                                    ; ClockDivider10 ; work         ;
+;          |ClockDivider5:DIV1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1                 ; ClockDivider5  ; work         ;
+;             |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
+;          |ClockDivider5:DIV2| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2                 ; ClockDivider5  ; work         ;
+;             |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div1|ClockDivider5:DIV2|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
+;       |ClockDivider10:div3|   ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3                                    ; ClockDivider10 ; work         ;
+;          |ClockDivider5:DIV1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1                 ; ClockDivider5  ; work         ;
+;             |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV1|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
+;          |ClockDivider5:DIV2| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2                 ; ClockDivider5  ; work         ;
+;             |T_FlipFlop:TFF1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF1 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF2 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF3| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF3 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF4| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF4 ; T_FlipFlop     ; work         ;
+;             |T_FlipFlop:TFF5| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider10:div3|ClockDivider5:DIV2|T_FlipFlop:TFF5 ; T_FlipFlop     ; work         ;
+;       |ClockDivider5:div2|    ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2                                     ; ClockDivider5  ; work         ;
+;          |T_FlipFlop:TFF1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF1                     ; T_FlipFlop     ; work         ;
+;          |T_FlipFlop:TFF2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF2                     ; T_FlipFlop     ; work         ;
+;          |T_FlipFlop:TFF3|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF3                     ; T_FlipFlop     ; work         ;
+;          |T_FlipFlop:TFF4|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF4                     ; T_FlipFlop     ; work         ;
+;          |T_FlipFlop:TFF5|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|ClockDivider5:div2|T_FlipFlop:TFF5                     ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:div4|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|T_FlipFlop:div4                                        ; T_FlipFlop     ; work         ;
+;       |T_FlipFlop:div5|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Main|Speed:speed|T_FlipFlop:div5                                        ; T_FlipFlop     ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -285,8 +261,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 47    ;
-; Number of registers using Synchronous Clear  ; 2     ;
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -295,38 +271,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Displays:displays|T_FlipFlop:div3"                                                                                                                                                 ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:displays|Display2:display2"                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; segs[9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; segs[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; segs[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Displays:displays|T_FlipFlop:div2"                                                                                                                                                 ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:displays|Display1:display1"                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; segs[9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; segs[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Displays:displays|ClockDivider10:div1"                                                                                                                                             ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:displays"                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Counter3Bits:C3Bits|T_FlipFlop:TFF0"                                                                                                                                               ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Speed:speed|T_FlipFlop:div5"                                                                                                                                                       ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -346,7 +332,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Speed:speed|T_FlipFlop:div3"                                                                                                                                                       ;
+; Port Connectivity Checks: "Speed:speed|ClockDivider10:div3"                                                                                                                                                   ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -366,36 +352,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Speed:speed|ClockDivider20:div1"                                                                                                                                                   ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Speed:speed"                                                                                                                                                           ;
-+-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
-+-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; speed ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (4 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
-+-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Button:button|ClockDivider5:DIV2"                                                                                                                                                  ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Button:button|ClockDivider10:DIV1"                                                                                                                                                 ;
+; Port Connectivity Checks: "Speed:speed|ClockDivider10:div1"                                                                                                                                                   ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -410,7 +367,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 06 00:28:20 2024
+    Info: Processing started: Thu Nov 07 14:02:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -440,53 +397,54 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: Display2 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file displays.v
     Info (12023): Found entity 1: Displays File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(8): created implicit net for "NA" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(9): created implicit net for "NB" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(10): created implicit net for "NC" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at Displays.v(14): created implicit net for "divided10" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(9): created implicit net for "NA" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(10): created implicit net for "NB" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at Display1Bkp.v(11): created implicit net for "NC" File: C:/Users/vrlop/Dev/cd-problema2/Display1Bkp.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at Displays.v(36): created implicit net for "divided5" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 36
 Info (12127): Elaborating entity "Main" for the top level hierarchy
-Info (12128): Elaborating entity "Button" for hierarchy "Button:button" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 21
-Info (12128): Elaborating entity "ClockDivider10" for hierarchy "Button:button|ClockDivider10:DIV1" File: C:/Users/vrlop/Dev/cd-problema2/Button.v Line: 16
-Info (12128): Elaborating entity "ClockDivider5" for hierarchy "Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1" File: C:/Users/vrlop/Dev/cd-problema2/ClockDivider10.v Line: 14
-Info (12128): Elaborating entity "T_FlipFlop" for hierarchy "Button:button|ClockDivider10:DIV1|ClockDivider5:DIV1|T_FlipFlop:TFF1" File: C:/Users/vrlop/Dev/cd-problema2/ClockDivider5.v Line: 14
-Info (12128): Elaborating entity "Speed" for hierarchy "Speed:speed" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 29
-Info (12128): Elaborating entity "ClockDivider20" for hierarchy "Speed:speed|ClockDivider20:div1" File: C:/Users/vrlop/Dev/cd-problema2/Speed.v Line: 13
-Info (12128): Elaborating entity "Multex" for hierarchy "Multex:multex" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 38
-Info (12128): Elaborating entity "Counter3Bits" for hierarchy "Counter3Bits:C3Bits" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 46
-Info (12128): Elaborating entity "Displays" for hierarchy "Displays:displays" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 54
-Info (12128): Elaborating entity "Display1" for hierarchy "Displays:displays|Display1:display1" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 43
-Warning (10739): Verilog HDL warning at Display1.v(39): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 39
-Warning (10739): Verilog HDL warning at Display1.v(49): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 49
-Warning (10739): Verilog HDL warning at Display1.v(52): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 52
+Info (12128): Elaborating entity "Button" for hierarchy "Button:button" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 19
+Info (12128): Elaborating entity "T_FlipFlop" for hierarchy "Button:button|T_FlipFlop:TFF1" File: C:/Users/vrlop/Dev/cd-problema2/Button.v Line: 19
+Info (12128): Elaborating entity "Speed" for hierarchy "Speed:speed" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 26
+Info (12128): Elaborating entity "ClockDivider10" for hierarchy "Speed:speed|ClockDivider10:div1" File: C:/Users/vrlop/Dev/cd-problema2/Speed.v Line: 13
+Info (12128): Elaborating entity "ClockDivider5" for hierarchy "Speed:speed|ClockDivider10:div1|ClockDivider5:DIV1" File: C:/Users/vrlop/Dev/cd-problema2/ClockDivider10.v Line: 14
+Info (12128): Elaborating entity "Multex" for hierarchy "Multex:multex" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 37
+Info (12128): Elaborating entity "Counter3Bits" for hierarchy "Counter3Bits:C3Bits" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 47
+Info (12128): Elaborating entity "Displays" for hierarchy "Displays:displays" File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 55
+Warning (10739): Verilog HDL warning at Displays.v(64): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 64
+Warning (10739): Verilog HDL warning at Displays.v(65): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 65
+Warning (10739): Verilog HDL warning at Displays.v(72): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 72
+Warning (10739): Verilog HDL warning at Displays.v(73): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 73
+Warning (10030): Net "divided5" at Displays.v(36) has no driver or initial value, using a default initial value '0' File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 36
+Info (12128): Elaborating entity "Display1" for hierarchy "Displays:displays|Display1:display1" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 21
+Warning (10739): Verilog HDL warning at Display1.v(38): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 38
+Warning (10739): Verilog HDL warning at Display1.v(48): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 48
+Warning (10739): Verilog HDL warning at Display1.v(51): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 51
+Warning (10739): Verilog HDL warning at Display1.v(54): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 54
 Warning (10739): Verilog HDL warning at Display1.v(55): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 55
 Warning (10739): Verilog HDL warning at Display1.v(56): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 56
-Warning (10739): Verilog HDL warning at Display1.v(57): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display1.v Line: 57
-Info (12128): Elaborating entity "Display2" for hierarchy "Displays:displays|Display2:display2" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 51
-Warning (10739): Verilog HDL warning at Display2.v(9): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 9
-Warning (10739): Verilog HDL warning at Display2.v(14): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 14
-Warning (10739): Verilog HDL warning at Display2.v(18): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 18
-Warning (10739): Verilog HDL warning at Display2.v(21): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 21
+Info (12128): Elaborating entity "Display2" for hierarchy "Displays:displays|Display2:display2" File: C:/Users/vrlop/Dev/cd-problema2/Displays.v Line: 27
+Warning (10739): Verilog HDL warning at Display2.v(8): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 8
+Warning (10739): Verilog HDL warning at Display2.v(13): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 13
+Warning (10739): Verilog HDL warning at Display2.v(17): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 17
+Warning (10739): Verilog HDL warning at Display2.v(20): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 20
+Warning (10739): Verilog HDL warning at Display2.v(23): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 23
 Warning (10739): Verilog HDL warning at Display2.v(24): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 24
 Warning (10739): Verilog HDL warning at Display2.v(25): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 25
-Warning (10739): Verilog HDL warning at Display2.v(26): actual bit length 32 differs from formal bit length 1 File: C:/Users/vrlop/Dev/cd-problema2/Display2.v Line: 26
-Info (13014): Ignored 4 buffer(s)
-    Info (13019): Ignored 4 SOFT buffer(s)
-Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 6 buffer(s)
+    Info (13019): Ignored 6 SOFT buffer(s)
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segs[5]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-    Warning (13410): Pin "segs[7]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-    Warning (13410): Pin "segs[8]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-    Warning (13410): Pin "segs[9]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-    Warning (13410): Pin "segs[10]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-    Warning (13410): Pin "segs[11]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 5
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "segs[8]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 6
+    Warning (13410): Pin "segs[10]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 6
+    Warning (13410): Pin "segs[11]" is stuck at VCC File: C:/Users/vrlop/Dev/cd-problema2/Main.v Line: 6
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 56 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Wed Nov 06 00:28:27 2024
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 45 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Thu Nov 07 14:02:51 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

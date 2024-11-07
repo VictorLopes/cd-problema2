@@ -1,36 +1,47 @@
 module Speed (
 	input reset,
 	input clk,
-	output [2:0] speed
+	output [3:0] speed
 );
-	wire divided20;
+	wire divided10, divided15;
 	
-	ClockDivider20 div1 (
+	ClockDivider10 div1 (
 	  .clk(clk),
 	  .reset(reset),
 	  .T(1),
-	  .Q(divided20)
+	  .Q(divided10)
 	);
 	
+	// 15 divisões
 	ClockDivider5 div2 (
-	  .clk(divided20),
+	  .clk(divided10),
 	  .reset(reset),
 	  .T(1),
 	  .Q(speed[0])
 	);
 	
-	T_FlipFlop div3(
-		.clk(speed[0]),
-		.reset(reset),
-		.T(1),
-		.Q(speed[1])
+	// 25 divisões
+	ClockDivider10 div3 (
+	  .clk(speed[0]),
+	  .reset(reset),
+	  .T(1),
+	  .Q(speed[1])
 	);
 	
+	// 26 divisões
 	T_FlipFlop div4(
 		.clk(speed[1]),
 		.reset(reset),
 		.T(1),
 		.Q(speed[2])
+	);
+	
+	// 27 divisões
+	T_FlipFlop div5(
+		.clk(speed[2]),
+		.reset(reset),
+		.T(1),
+		.Q(speed[3])
 	);
 	
 endmodule

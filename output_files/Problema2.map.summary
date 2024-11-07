@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Nov 06 00:28:27 2024
+Analysis & Synthesis Status : Successful - Thu Nov 07 14:02:51 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Problema2
 Top-level Entity Name : Main
 Family : MAX II
-Total logic elements : 56
-Total pins : 18
+Total logic elements : 45
+Total pins : 15
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -2,30 +2,27 @@ module Main(
 	input clk,
 	input reset,
 	input btn,
-	output [11:0] segs,
-	output [2:0] Q
+	output [11:0] segs
 );
+	wire NBtn, BtnBit0, BtnBit1;
+	wire Qbit1, Qbit2;
+	wire [3:0] spd;
 	
-	wire BtnBit0, BtnBit1;
-	
-	/* assign leds[0] = Q0;
-	assign leds[1] = Q1;
-	assign leds[2] = Q2;*/
+	not(NBtn, btn);
 	
 	Button button(
-		.clk(clk),
+		.clk(spd[0]),
 		.reset(reset),
-		.B(btn),
+		.B(NBtn),
 		.Q1(BtnBit0),
 		.Q2(BtnBit1)
 	);
 	
-	wire [3:0] spd;
 	
 	Speed speed(
-		.reset(btn),
+		.reset(NBtn),
 		.clk(clk),
-		.speed(spd[3:0])
+		.speed(spd)
 	);
 	
 	wire divided_clk;
@@ -33,26 +30,28 @@ module Main(
 	Multex multex(
 		.A(BtnBit0),
 		.B(BtnBit1),
-		.clk(spd[2:0]),
+		.clk(spd),
+		.Qbit1(Qbit1),
+		.Qbit2(Qbit2),
 		.Q(divided_clk)
 	);
 	
-	wire Q0, Q1, Q2;
+	wire [2:0] Q;
  
+	
+	
 	Counter3Bits C3Bits(
 		.clk(divided_clk),
 		.reset(reset),
 		.Q(Q)
 	);
 	
-	
 	Displays displays(
 		.bits(Q),
-		.reset(reset),
-		.clk(clk),
-		.segs(segs[11:0])
+		.segs(segs),
+		.v1(Qbit1),
+		.v2(Qbit2),
+		.clk(spd[0])
 	);
-	
-	
 	
 endmodule
