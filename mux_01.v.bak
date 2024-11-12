@@ -1,0 +1,27 @@
+module mux_01(
+	input [11:0] seg0,
+	input [11:0] seg1,
+	input clk,
+	output [11:0] seg_fin
+	);
+
+wire neg_clk;
+not(neg_clk, clk);
+
+wire [11:0]acao;
+wire [11:0]temp;
+
+and(acao[11:0], seg0[11:0], {12{clk}});
+and(temp[11:0], seg1[11:0], {12{neg_clk}});
+or(seg_fin[11:0], acao[11:0], temp[11:0]);
+
+endmodule
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+module main_p(
+	input clk, bot,
+	output leds,
+	output [11:0] seg
+	
+);
+
+wire [11:0] seg0, seg1;
+
+esc_clk sai15(clk, Q15, Q23, Q24, Q25);
+
+conta3 conte3(Q25, A, B, C);
+conta2 conte2(Q25, D, E);
+
+out07seg temp(A, B, C, seg0);
+out17seg acao(D, E, seg1);
+
+mux_01 multiplexa(seg0, seg1, Q15, seg);
+
+deboun testa_b(Q15, bot, leds);
+	
+
+endmodule

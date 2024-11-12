@@ -1,0 +1,50 @@
+module esc_clk(clk, rst, t, q[26:0]);
+    input clk;
+    input rst;
+    input t;
+    output reg q[26:0];
+not (rst, 1'b0);
+// assign rst = 1'b1;
+not (rst, 1'b0);
+// assign t = 1'b1;
+// saida 50*10^6
+Tff(clk, rst, t, q[0]);
+Tff(q[0], rst, t, q[1]);
+Tff(q[1], rst, t, q[2]);
+Tff(q[2], rst, t, q[3]);
+Tff(q[3], rst, t, q[4]);
+// 1.562.500 pulsos por s
+Tff(q[4], rst, t, q[5]);
+Tff(q[5], rst, t, q[6]);
+Tff(q[6], rst, t, q[7]);
+Tff(q[7], rst, t, q[8]);
+Tff(q[8], rst, t, q[9]);
+// 48.828 pulsos por s
+Tff(q[9], rst, t, q[10]);
+Tff(q[10], rst, t, q[11]);
+Tff(q[11], rst, t, q[12]);
+Tff(q[12], rst, t, q[13]);
+Tff(q[13], rst, t, q[14]);
+// 1.525 pulsos por s
+Tff(q[14], rst, t, q[15]);
+Tff(q[15], rst, t, q[16]);
+Tff(q[16], rst, t, q[17]);
+Tff(q[17], rst, t, q[18]);
+Tff(q[18], rst, t, q[19]);
+// 47 pulsos por s
+Tff(q[19], rst, t, q[20]);
+Tff(q[20], rst, t, q[21]);
+Tff(q[21], rst, t, q[22]);
+Tff(q[22], rst, t, q[23]);
+Tff(q[23], rst, t, q[24]);
+// 1,49 pulsos por s
+Tff(q[24], rst, t, q[25]);
+Tff(q[25], rst, t, q[26]);
+Tff(q[26], rst, t, q[27]);
+    
+endmodule
+    
+// para 1 hz 110000110101101101101000000
+// para 1/2 Hz 110000110101101101101000001
+// para 1/4 Hz 110000110101101101101000010
+// para 1/8 Hz 110000110101101101101000011

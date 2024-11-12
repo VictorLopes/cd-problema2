@@ -1,0 +1,67 @@
+module out07seg(A, B, C,segs[11:0]);
+	input A;
+	input B;
+	input C;
+    // output segA, segB, segC, segD, segE, segF, segG, segH, segI, des1, des2, des3;
+	 // de 0 a 6, os 7 segmentos 
+	 // 7 display 1
+	 // 8 ponto
+	 // de 9 a 11, display 2, 3 e 4 respectivamente
+    output [11:0] segs;
+
+// saida A
+wire orA, orB, orC;
+
+	and(orA, ~B, ~A, ~C);
+	and(orB, ~A, B, C);
+	and(orC, ~B, A, C);
+
+	or (segs[0], orA, orB, orC);
+// saida B
+
+	or (segs[1], A, B, ~C);
+	
+// saida C
+wire orA2, orB2, orC2;
+	
+	and (orA2, ~A, ~C);
+	and (orB2, ~A, B);
+	and (orC2, B, C);
+
+	or (segs[2], orA2, orB2, orC2);
+// saida D
+	
+	and (segs[3], ~A, ~B);
+	
+// saida E
+
+	and (segs[4], ~B, ~C);
+
+// saida F
+
+	and (segs[5], ~A, ~B, ~C);
+
+// saida G
+wire orA6, orB6, orC6;
+
+	and(orA6, ~A, B);
+	and(orB6, B, ~C);
+	and(orC6, ~A, ~C);
+	
+	or(segs[6], orA6, orB6, orC6);
+	
+
+// saida H ( nao precisa, ele vai ficar sempre ligado -> 0)
+
+	not (segs[7], 1);
+
+// saida I ( ponto sempre desligado)
+
+	not (segs[8], 0);
+
+// desliga saidas de display( isso tem que mudar porque tem o de veloidade
+	not (segs[9], 0);
+	not (segs[10], 0);
+	not (segs[11], 0);	
+
+endmodule

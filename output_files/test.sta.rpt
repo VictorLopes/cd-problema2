@@ -1,0 +1,1288 @@
+Timing Analyzer report for test
+Thu Nov 07 01:30:52 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'esc_clk:sai15|t_ff:comb_20|q'
+ 12. Setup: 'esc_clk:sai15|t_ff:comb_29|q'
+ 13. Setup: 'conta2:conte2|t_ff:comb_5|q'
+ 14. Setup: 'conta3:conte3|t_ff:comb_6|q'
+ 15. Setup: 'esc_clk:sai15|t_ff:comb_11|q'
+ 16. Setup: 'esc_clk:sai15|t_ff:comb_15|q'
+ 17. Setup: 'esc_clk:sai15|t_ff:comb_21|q'
+ 18. Setup: 'esc_clk:sai15|t_ff:comb_23|q'
+ 19. Setup: 'esc_clk:sai15|t_ff:comb_25|q'
+ 20. Setup: 'esc_clk:sai15|t_ff:comb_7|q'
+ 21. Setup: 'esc_clk:sai15|t_ff:comb_9|q'
+ 22. Setup: 'esc_clk:sai15|t_ff:comb_13|q'
+ 23. Setup: 'esc_clk:sai15|t_ff:comb_18|q'
+ 24. Setup: 'esc_clk:sai15|t_ff:comb_27|q'
+ 25. Setup: 'esc_clk:sai15|t_ff:comb_8|q'
+ 26. Setup: 'esc_clk:sai15|t_ff:comb_24|q'
+ 27. Setup: 'esc_clk:sai15|t_ff:comb_28|q'
+ 28. Setup: 'esc_clk:sai15|t_ff:comb_12|q'
+ 29. Setup: 'esc_clk:sai15|t_ff:comb_22|q'
+ 30. Setup: 'esc_clk:sai15|t_ff:comb_6|q'
+ 31. Setup: 'conta3:conte3|t_ff:comb_5|q'
+ 32. Setup: 'esc_clk:sai15|t_ff:comb_16|q'
+ 33. Setup: 'deboun:testa_b|t_ff:comb_4|q'
+ 34. Setup: 'esc_clk:sai15|t_ff:comb_10|q'
+ 35. Setup: 'esc_clk:sai15|t_ff:comb_14|q'
+ 36. Setup: 'esc_clk:sai15|t_ff:comb_17|q'
+ 37. Setup: 'esc_clk:sai15|t_ff:comb_19|q'
+ 38. Setup: 'esc_clk:sai15|t_ff:comb_5|q'
+ 39. Setup: 'esc_clk:sai15|t_ff:comb_26|q'
+ 40. Setup: 'clk'
+ 41. Hold: 'esc_clk:sai15|t_ff:comb_29|q'
+ 42. Hold: 'esc_clk:sai15|t_ff:comb_28|q'
+ 43. Hold: 'conta2:conte2|t_ff:comb_5|q'
+ 44. Hold: 'clk'
+ 45. Hold: 'esc_clk:sai15|t_ff:comb_20|q'
+ 46. Hold: 'esc_clk:sai15|t_ff:comb_26|q'
+ 47. Hold: 'esc_clk:sai15|t_ff:comb_5|q'
+ 48. Hold: 'esc_clk:sai15|t_ff:comb_19|q'
+ 49. Hold: 'esc_clk:sai15|t_ff:comb_17|q'
+ 50. Hold: 'esc_clk:sai15|t_ff:comb_14|q'
+ 51. Hold: 'esc_clk:sai15|t_ff:comb_10|q'
+ 52. Hold: 'deboun:testa_b|t_ff:comb_4|q'
+ 53. Hold: 'esc_clk:sai15|t_ff:comb_16|q'
+ 54. Hold: 'conta3:conte3|t_ff:comb_5|q'
+ 55. Hold: 'esc_clk:sai15|t_ff:comb_6|q'
+ 56. Hold: 'esc_clk:sai15|t_ff:comb_12|q'
+ 57. Hold: 'esc_clk:sai15|t_ff:comb_22|q'
+ 58. Hold: 'esc_clk:sai15|t_ff:comb_24|q'
+ 59. Hold: 'esc_clk:sai15|t_ff:comb_8|q'
+ 60. Hold: 'esc_clk:sai15|t_ff:comb_18|q'
+ 61. Hold: 'esc_clk:sai15|t_ff:comb_27|q'
+ 62. Hold: 'esc_clk:sai15|t_ff:comb_13|q'
+ 63. Hold: 'esc_clk:sai15|t_ff:comb_23|q'
+ 64. Hold: 'esc_clk:sai15|t_ff:comb_25|q'
+ 65. Hold: 'esc_clk:sai15|t_ff:comb_7|q'
+ 66. Hold: 'esc_clk:sai15|t_ff:comb_9|q'
+ 67. Hold: 'esc_clk:sai15|t_ff:comb_11|q'
+ 68. Hold: 'esc_clk:sai15|t_ff:comb_15|q'
+ 69. Hold: 'esc_clk:sai15|t_ff:comb_21|q'
+ 70. Hold: 'conta3:conte3|t_ff:comb_6|q'
+ 71. Setup Transfers
+ 72. Hold Transfers
+ 73. Report TCCS
+ 74. Report RSKM
+ 75. Unconstrained Paths Summary
+ 76. Clock Status Summary
+ 77. Unconstrained Input Ports
+ 78. Unconstrained Output Ports
+ 79. Unconstrained Input Ports
+ 80. Unconstrained Output Ports
+ 81. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; test                                                ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                     ;
++------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
+; Clock Name                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                          ;
++------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
+; clk                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                          ;
+; conta2:conte2|t_ff:comb_5|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { conta2:conte2|t_ff:comb_5|q }  ;
+; conta3:conte3|t_ff:comb_5|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { conta3:conte3|t_ff:comb_5|q }  ;
+; conta3:conte3|t_ff:comb_6|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { conta3:conte3|t_ff:comb_6|q }  ;
+; deboun:testa_b|t_ff:comb_4|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { deboun:testa_b|t_ff:comb_4|q } ;
+; esc_clk:sai15|t_ff:comb_5|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_5|q }  ;
+; esc_clk:sai15|t_ff:comb_6|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_6|q }  ;
+; esc_clk:sai15|t_ff:comb_7|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_7|q }  ;
+; esc_clk:sai15|t_ff:comb_8|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_8|q }  ;
+; esc_clk:sai15|t_ff:comb_9|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_9|q }  ;
+; esc_clk:sai15|t_ff:comb_10|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_10|q } ;
+; esc_clk:sai15|t_ff:comb_11|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_11|q } ;
+; esc_clk:sai15|t_ff:comb_12|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_12|q } ;
+; esc_clk:sai15|t_ff:comb_13|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_13|q } ;
+; esc_clk:sai15|t_ff:comb_14|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_14|q } ;
+; esc_clk:sai15|t_ff:comb_15|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_15|q } ;
+; esc_clk:sai15|t_ff:comb_16|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_16|q } ;
+; esc_clk:sai15|t_ff:comb_17|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_17|q } ;
+; esc_clk:sai15|t_ff:comb_18|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_18|q } ;
+; esc_clk:sai15|t_ff:comb_19|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_19|q } ;
+; esc_clk:sai15|t_ff:comb_20|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_20|q } ;
+; esc_clk:sai15|t_ff:comb_21|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_21|q } ;
+; esc_clk:sai15|t_ff:comb_22|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_22|q } ;
+; esc_clk:sai15|t_ff:comb_23|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_23|q } ;
+; esc_clk:sai15|t_ff:comb_24|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_24|q } ;
+; esc_clk:sai15|t_ff:comb_25|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_25|q } ;
+; esc_clk:sai15|t_ff:comb_26|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_26|q } ;
+; esc_clk:sai15|t_ff:comb_27|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_27|q } ;
+; esc_clk:sai15|t_ff:comb_28|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_28|q } ;
+; esc_clk:sai15|t_ff:comb_29|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esc_clk:sai15|t_ff:comb_29|q } ;
++------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------+
+; Fmax Summary                                                       ;
++------------+-----------------+------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
++------------+-----------------+------------------------------+------+
+; 404.37 MHz ; 404.37 MHz      ; esc_clk:sai15|t_ff:comb_20|q ;      ;
+; 407.66 MHz ; 407.66 MHz      ; esc_clk:sai15|t_ff:comb_29|q ;      ;
+; 455.79 MHz ; 455.79 MHz      ; conta2:conte2|t_ff:comb_5|q  ;      ;
+; 456.0 MHz  ; 456.0 MHz       ; conta3:conte3|t_ff:comb_6|q  ;      ;
++------------+-----------------+------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------+
+; Setup Summary                                         ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; esc_clk:sai15|t_ff:comb_20|q ; -1.473 ; -1.473        ;
+; esc_clk:sai15|t_ff:comb_29|q ; -1.453 ; -1.453        ;
+; conta2:conte2|t_ff:comb_5|q  ; -1.194 ; -1.194        ;
+; conta3:conte3|t_ff:comb_6|q  ; -1.193 ; -1.193        ;
+; esc_clk:sai15|t_ff:comb_11|q ; 0.466  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_15|q ; 0.466  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_21|q ; 0.466  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_23|q ; 0.467  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_25|q ; 0.467  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_7|q  ; 0.467  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_9|q  ; 0.467  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_13|q ; 0.468  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_18|q ; 0.469  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_27|q ; 0.469  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_8|q  ; 0.808  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_24|q ; 0.819  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_28|q ; 0.823  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_12|q ; 0.825  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_22|q ; 0.825  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_6|q  ; 0.833  ; 0.000         ;
+; conta3:conte3|t_ff:comb_5|q  ; 0.841  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_16|q ; 0.842  ; 0.000         ;
+; deboun:testa_b|t_ff:comb_4|q ; 1.118  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_10|q ; 1.178  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_14|q ; 1.213  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_17|q ; 1.312  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_19|q ; 1.384  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_5|q  ; 1.569  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_26|q ; 1.778  ; 0.000         ;
+; clk                          ; 2.956  ; 0.000         ;
++------------------------------+--------+---------------+
+
+
++-------------------------------------------------------+
+; Hold Summary                                          ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; esc_clk:sai15|t_ff:comb_29|q ; -4.246 ; -4.246        ;
+; esc_clk:sai15|t_ff:comb_28|q ; -4.143 ; -5.020        ;
+; conta2:conte2|t_ff:comb_5|q  ; -3.582 ; -3.582        ;
+; clk                          ; -3.010 ; -3.010        ;
+; esc_clk:sai15|t_ff:comb_20|q ; -2.360 ; -6.842        ;
+; esc_clk:sai15|t_ff:comb_26|q ; -1.832 ; -1.832        ;
+; esc_clk:sai15|t_ff:comb_5|q  ; -1.623 ; -1.623        ;
+; esc_clk:sai15|t_ff:comb_19|q ; -1.438 ; -1.438        ;
+; esc_clk:sai15|t_ff:comb_17|q ; -1.366 ; -1.366        ;
+; esc_clk:sai15|t_ff:comb_14|q ; -1.267 ; -1.267        ;
+; esc_clk:sai15|t_ff:comb_10|q ; -1.232 ; -1.232        ;
+; deboun:testa_b|t_ff:comb_4|q ; -1.172 ; -1.172        ;
+; esc_clk:sai15|t_ff:comb_16|q ; -0.896 ; -0.896        ;
+; conta3:conte3|t_ff:comb_5|q  ; -0.895 ; -0.895        ;
+; esc_clk:sai15|t_ff:comb_6|q  ; -0.887 ; -0.887        ;
+; esc_clk:sai15|t_ff:comb_12|q ; -0.879 ; -0.879        ;
+; esc_clk:sai15|t_ff:comb_22|q ; -0.879 ; -0.879        ;
+; esc_clk:sai15|t_ff:comb_24|q ; -0.873 ; -0.873        ;
+; esc_clk:sai15|t_ff:comb_8|q  ; -0.862 ; -0.862        ;
+; esc_clk:sai15|t_ff:comb_18|q ; -0.523 ; -0.523        ;
+; esc_clk:sai15|t_ff:comb_27|q ; -0.523 ; -0.523        ;
+; esc_clk:sai15|t_ff:comb_13|q ; -0.522 ; -0.522        ;
+; esc_clk:sai15|t_ff:comb_23|q ; -0.521 ; -0.521        ;
+; esc_clk:sai15|t_ff:comb_25|q ; -0.521 ; -0.521        ;
+; esc_clk:sai15|t_ff:comb_7|q  ; -0.521 ; -0.521        ;
+; esc_clk:sai15|t_ff:comb_9|q  ; -0.521 ; -0.521        ;
+; esc_clk:sai15|t_ff:comb_11|q ; -0.520 ; -0.520        ;
+; esc_clk:sai15|t_ff:comb_15|q ; -0.520 ; -0.520        ;
+; esc_clk:sai15|t_ff:comb_21|q ; -0.520 ; -0.520        ;
+; conta3:conte3|t_ff:comb_6|q  ; 1.639  ; 0.000         ;
++------------------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-------------------------------------------------------+
+; Minimum Pulse Width Summary                           ;
++------------------------------+--------+---------------+
+; Clock                        ; Slack  ; End Point TNS ;
++------------------------------+--------+---------------+
+; clk                          ; -2.289 ; -2.289        ;
+; conta2:conte2|t_ff:comb_5|q  ; -0.170 ; -0.340        ;
+; conta3:conte3|t_ff:comb_5|q  ; 0.234  ; 0.000         ;
+; conta3:conte3|t_ff:comb_6|q  ; 0.234  ; 0.000         ;
+; deboun:testa_b|t_ff:comb_4|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_10|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_11|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_12|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_13|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_14|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_15|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_16|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_17|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_18|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_19|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_20|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_21|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_22|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_23|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_24|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_25|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_26|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_27|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_28|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_29|q ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_5|q  ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_6|q  ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_7|q  ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_8|q  ; 0.234  ; 0.000         ;
+; esc_clk:sai15|t_ff:comb_9|q  ; 0.234  ; 0.000         ;
++------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_20|q'                                                                                                                                       ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.473 ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; 1.000        ; 0.000      ; 2.140      ;
+; 2.069  ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.500        ; 3.664      ; 2.138      ;
+; 2.305  ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.500        ; 3.664      ; 1.902      ;
+; 2.306  ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.500        ; 3.664      ; 1.901      ;
+; 2.569  ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; 1.000        ; 3.664      ; 2.138      ;
+; 2.805  ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 1.000        ; 3.664      ; 1.902      ;
+; 2.806  ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 1.000        ; 3.664      ; 1.901      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_29|q'                                                                                                                                       ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.453 ; esc_clk:sai15|t_ff:comb_30|q ; esc_clk:sai15|t_ff:comb_30|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; 1.000        ; 0.000      ; 2.120      ;
+; 4.192  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; 0.500        ; 5.510      ; 1.861      ;
+; 4.692  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; 1.000        ; 5.510      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'conta2:conte2|t_ff:comb_5|q'                                                                                                                                    ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -1.194 ; conta2:conte2|t_ff:comb_6|q ; conta2:conte2|t_ff:comb_6|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; 1.000        ; 0.000      ; 1.861      ;
+; 3.124  ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; 0.500        ; 4.442      ; 1.861      ;
+; 3.624  ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; 1.000        ; 4.442      ; 1.861      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'conta3:conte3|t_ff:comb_6|q'                                                                                                                                    ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -1.193 ; conta3:conte3|t_ff:comb_7|q ; conta3:conte3|t_ff:comb_7|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; 1.000        ; 0.000      ; 1.860      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_11|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.466 ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_15|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.466 ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_21|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.466 ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_23|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.467 ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; 0.500        ; 1.785      ; 1.861      ;
+; 0.967 ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; 1.000        ; 1.785      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_25|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.467 ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; 0.500        ; 1.785      ; 1.861      ;
+; 0.967 ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; 1.000        ; 1.785      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_7|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 0.467 ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_7|q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_7|q ; 1.000        ; 1.784      ; 1.860      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_9|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+; 0.467 ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q ; 1.000        ; 1.784      ; 1.860      ;
++-------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_13|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.468 ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; 0.500        ; 1.785      ; 1.860      ;
+; 0.968 ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; 1.000        ; 1.785      ; 1.860      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_18|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.469 ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; 0.500        ; 1.786      ; 1.860      ;
+; 0.969 ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; 1.000        ; 1.786      ; 1.860      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_27|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.469 ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; 0.500        ; 1.786      ; 1.860      ;
+; 0.969 ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; 1.000        ; 1.786      ; 1.860      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_8|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 0.808 ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_8|q ; 0.500        ; 2.144      ; 1.879      ;
+; 1.308 ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_8|q ; 1.000        ; 2.144      ; 1.879      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_24|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.819 ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; 0.500        ; 2.154      ; 1.878      ;
+; 1.319 ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; 1.000        ; 2.154      ; 1.878      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_28|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.823 ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; 0.500        ; 2.159      ; 1.879      ;
+; 1.323 ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; 1.000        ; 2.159      ; 1.879      ;
+; 4.089 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; 0.500        ; 5.407      ; 1.861      ;
+; 4.589 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; 1.000        ; 5.407      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_12|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.825 ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; 0.500        ; 2.160      ; 1.878      ;
+; 1.325 ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; 1.000        ; 2.160      ; 1.878      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_22|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.825 ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; 0.500        ; 2.160      ; 1.878      ;
+; 1.325 ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; 1.000        ; 2.160      ; 1.878      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_6|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 0.833 ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_6|q ; 0.500        ; 2.169      ; 1.879      ;
+; 1.333 ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_6|q ; 1.000        ; 2.169      ; 1.879      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'conta3:conte3|t_ff:comb_5|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 0.841 ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_5|q ; 0.500        ; 2.194      ; 1.896      ;
+; 1.341 ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_5|q ; 1.000        ; 2.194      ; 1.896      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_16|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 0.842 ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; 0.500        ; 2.160      ; 1.861      ;
+; 1.342 ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; 1.000        ; 2.160      ; 1.861      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'deboun:testa_b|t_ff:comb_4|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+; 1.118 ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; 0.500        ; 2.735      ; 2.160      ;
+; 1.618 ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; 1.000        ; 2.735      ; 2.160      ;
++-------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_10|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 1.178 ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; 0.500        ; 2.773      ; 2.138      ;
+; 1.678 ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; 1.000        ; 2.773      ; 2.138      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_14|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 1.213 ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; 0.500        ; 2.808      ; 2.138      ;
+; 1.713 ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; 1.000        ; 2.808      ; 2.138      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_17|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 1.312 ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; 0.500        ; 2.906      ; 2.137      ;
+; 1.812 ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; 1.000        ; 2.906      ; 2.137      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_19|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 1.384 ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; 0.500        ; 2.961      ; 2.120      ;
+; 1.884 ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; 1.000        ; 2.961      ; 2.120      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_5|q'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 1.569 ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_5|q ; 0.500        ; 2.887      ; 1.861      ;
+; 2.069 ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_5|q ; 1.000        ; 2.887      ; 1.861      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'esc_clk:sai15|t_ff:comb_26|q'                                                                                                                                      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; 1.778 ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; 0.500        ; 3.372      ; 2.137      ;
+; 2.278 ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; 1.000        ; 3.372      ; 2.137      ;
++-------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                           ;
++-------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+; 2.956 ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; clk         ; 0.500        ; 4.533      ; 2.120      ;
+; 3.456 ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; clk         ; 1.000        ; 4.533      ; 2.120      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_29|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -4.246 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; 0.000        ; 5.510      ; 1.861      ;
+; -3.746 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; -0.500       ; 5.510      ; 1.861      ;
+; 1.899  ; esc_clk:sai15|t_ff:comb_30|q ; esc_clk:sai15|t_ff:comb_30|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; 0.000        ; 0.000      ; 2.120      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_28|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -4.143 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; 0.000        ; 5.407      ; 1.861      ;
+; -3.643 ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; -0.500       ; 5.407      ; 1.861      ;
+; -0.877 ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; 0.000        ; 2.159      ; 1.879      ;
+; -0.377 ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; -0.500       ; 2.159      ; 1.879      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'conta2:conte2|t_ff:comb_5|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -3.582 ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; 0.000        ; 4.846      ; 1.861      ;
+; -3.082 ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta3:conte3|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; -0.500       ; 4.846      ; 1.861      ;
+; 1.640  ; conta2:conte2|t_ff:comb_6|q ; conta2:conte2|t_ff:comb_6|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; 0.000        ; 0.000      ; 1.861      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                             ;
++--------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+; -3.010 ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; clk         ; 0.000        ; 4.533      ; 2.120      ;
+; -2.510 ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_5|q ; clk         ; -0.500       ; 4.533      ; 2.120      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_20|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -2.360 ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.000        ; 3.664      ; 1.901      ;
+; -2.359 ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.000        ; 3.664      ; 1.902      ;
+; -2.123 ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.000        ; 3.664      ; 2.138      ;
+; -1.860 ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; -0.500       ; 3.664      ; 1.901      ;
+; -1.859 ; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; -0.500       ; 3.664      ; 1.902      ;
+; -1.623 ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; -0.500       ; 3.664      ; 2.138      ;
+; 1.919  ; deboun:testa_b|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_5|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; 0.000        ; 0.000      ; 2.140      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_26|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.832 ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; 0.000        ; 3.372      ; 2.137      ;
+; -1.332 ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; -0.500       ; 3.372      ; 2.137      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_5|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -1.623 ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_5|q ; 0.000        ; 2.887      ; 1.861      ;
+; -1.123 ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_6|q ; esc_clk:sai15|t_ff:comb_5|q ; -0.500       ; 2.887      ; 1.861      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_19|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.438 ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; 0.000        ; 2.961      ; 2.120      ;
+; -0.938 ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; -0.500       ; 2.961      ; 2.120      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_17|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.366 ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; 0.000        ; 2.906      ; 2.137      ;
+; -0.866 ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; -0.500       ; 2.906      ; 2.137      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_14|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.267 ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; 0.000        ; 2.808      ; 2.138      ;
+; -0.767 ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; -0.500       ; 2.808      ; 2.138      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_10|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -1.232 ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; 0.000        ; 2.773      ; 2.138      ;
+; -0.732 ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; -0.500       ; 2.773      ; 2.138      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'deboun:testa_b|t_ff:comb_4|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+; -1.172 ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; 0.000        ; 2.735      ; 2.160      ;
+; -0.672 ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; conta2:conte2|t_ff:comb_5|q ; deboun:testa_b|t_ff:comb_4|q ; -0.500       ; 2.735      ; 2.160      ;
++--------+-----------------------------+-----------------------------+-----------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_16|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.896 ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; 0.000        ; 2.160      ; 1.861      ;
+; -0.396 ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; -0.500       ; 2.160      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'conta3:conte3|t_ff:comb_5|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -0.895 ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_5|q ; 0.000        ; 2.194      ; 1.896      ;
+; -0.395 ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_5|q ; -0.500       ; 2.194      ; 1.896      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_6|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -0.887 ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_6|q ; 0.000        ; 2.169      ; 1.879      ;
+; -0.387 ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_7|q ; esc_clk:sai15|t_ff:comb_6|q ; -0.500       ; 2.169      ; 1.879      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_12|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.879 ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; 0.000        ; 2.160      ; 1.878      ;
+; -0.379 ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; -0.500       ; 2.160      ; 1.878      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_22|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.879 ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; 0.000        ; 2.160      ; 1.878      ;
+; -0.379 ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; -0.500       ; 2.160      ; 1.878      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_24|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.873 ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; 0.000        ; 2.154      ; 1.878      ;
+; -0.373 ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; -0.500       ; 2.154      ; 1.878      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_8|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -0.862 ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_8|q ; 0.000        ; 2.144      ; 1.879      ;
+; -0.362 ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_9|q ; esc_clk:sai15|t_ff:comb_8|q ; -0.500       ; 2.144      ; 1.879      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_18|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.523 ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; 0.000        ; 1.786      ; 1.860      ;
+; -0.023 ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; -0.500       ; 1.786      ; 1.860      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_27|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.523 ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; 0.000        ; 1.786      ; 1.860      ;
+; -0.023 ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; -0.500       ; 1.786      ; 1.860      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_13|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.522 ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; 0.000        ; 1.785      ; 1.860      ;
+; -0.022 ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; -0.500       ; 1.785      ; 1.860      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_23|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.521 ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; 0.000        ; 1.785      ; 1.861      ;
+; -0.021 ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; -0.500       ; 1.785      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_25|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.521 ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; 0.000        ; 1.785      ; 1.861      ;
+; -0.021 ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; -0.500       ; 1.785      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_7|q'                                                                                                                                     ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; -0.521 ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_7|q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_8|q ; esc_clk:sai15|t_ff:comb_7|q ; -0.500       ; 1.784      ; 1.860      ;
++--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_9|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+; -0.521 ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q ; -0.500       ; 1.784      ; 1.860      ;
++--------+------------------------------+------------------------------+------------------------------+-----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_11|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.520 ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_15|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.520 ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'esc_clk:sai15|t_ff:comb_21|q'                                                                                                                                        ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock                 ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+; -0.520 ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+------------------------------+------------------------------+------------------------------+------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'conta3:conte3|t_ff:comb_6|q'                                                                                                                                    ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+; 1.639 ; conta3:conte3|t_ff:comb_7|q ; conta3:conte3|t_ff:comb_7|q ; conta3:conte3|t_ff:comb_6|q ; conta3:conte3|t_ff:comb_6|q ; 0.000        ; 0.000      ; 1.860      ;
++-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                         ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+; esc_clk:sai15|t_ff:comb_5|q  ; clk                          ; 1        ; 1        ; 0        ; 0        ;
+; conta2:conte2|t_ff:comb_5|q  ; conta2:conte2|t_ff:comb_5|q  ; 1        ; 0        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; conta2:conte2|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_6|q  ; conta3:conte3|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_6|q  ; conta3:conte3|t_ff:comb_6|q  ; 1        ; 0        ; 0        ; 0        ;
+; conta2:conte2|t_ff:comb_5|q  ; deboun:testa_b|t_ff:comb_4|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_6|q  ; esc_clk:sai15|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_7|q  ; esc_clk:sai15|t_ff:comb_6|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_8|q  ; esc_clk:sai15|t_ff:comb_7|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_9|q  ; esc_clk:sai15|t_ff:comb_8|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; 1        ; 1        ; 0        ; 0        ;
+; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 2        ; 2        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; 1        ; 0        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; 1        ; 0        ; 0        ; 0        ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                          ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+; esc_clk:sai15|t_ff:comb_5|q  ; clk                          ; 1        ; 1        ; 0        ; 0        ;
+; conta2:conte2|t_ff:comb_5|q  ; conta2:conte2|t_ff:comb_5|q  ; 1        ; 0        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; conta2:conte2|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_6|q  ; conta3:conte3|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_6|q  ; conta3:conte3|t_ff:comb_6|q  ; 1        ; 0        ; 0        ; 0        ;
+; conta2:conte2|t_ff:comb_5|q  ; deboun:testa_b|t_ff:comb_4|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_6|q  ; esc_clk:sai15|t_ff:comb_5|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_7|q  ; esc_clk:sai15|t_ff:comb_6|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_8|q  ; esc_clk:sai15|t_ff:comb_7|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_9|q  ; esc_clk:sai15|t_ff:comb_8|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_9|q  ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_10|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_11|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_12|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_13|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_14|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_15|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_16|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_17|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_18|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_19|q ; 1        ; 1        ; 0        ; 0        ;
+; deboun:testa_b|t_ff:comb_4|q ; esc_clk:sai15|t_ff:comb_20|q ; 2        ; 2        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; 1        ; 0        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_20|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_21|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_22|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_23|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_24|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_25|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_26|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_27|q ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_28|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_28|q ; 1        ; 1        ; 0        ; 0        ;
+; conta3:conte3|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_29|q ; 1        ; 1        ; 0        ; 0        ;
+; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; 1        ; 0        ; 0        ; 0        ;
++------------------------------+------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------------------------+
+; Clock Status Summary                                                             ;
++------------------------------+------------------------------+------+-------------+
+; Target                       ; Clock                        ; Type ; Status      ;
++------------------------------+------------------------------+------+-------------+
+; clk                          ; clk                          ; Base ; Constrained ;
+; conta2:conte2|t_ff:comb_5|q  ; conta2:conte2|t_ff:comb_5|q  ; Base ; Constrained ;
+; conta3:conte3|t_ff:comb_5|q  ; conta3:conte3|t_ff:comb_5|q  ; Base ; Constrained ;
+; conta3:conte3|t_ff:comb_6|q  ; conta3:conte3|t_ff:comb_6|q  ; Base ; Constrained ;
+; deboun:testa_b|t_ff:comb_4|q ; deboun:testa_b|t_ff:comb_4|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_5|q  ; esc_clk:sai15|t_ff:comb_5|q  ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_6|q  ; esc_clk:sai15|t_ff:comb_6|q  ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_7|q  ; esc_clk:sai15|t_ff:comb_7|q  ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_8|q  ; esc_clk:sai15|t_ff:comb_8|q  ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_9|q  ; esc_clk:sai15|t_ff:comb_9|q  ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_10|q ; esc_clk:sai15|t_ff:comb_10|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_11|q ; esc_clk:sai15|t_ff:comb_11|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_12|q ; esc_clk:sai15|t_ff:comb_12|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_13|q ; esc_clk:sai15|t_ff:comb_13|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_14|q ; esc_clk:sai15|t_ff:comb_14|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_15|q ; esc_clk:sai15|t_ff:comb_15|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_16|q ; esc_clk:sai15|t_ff:comb_16|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_17|q ; esc_clk:sai15|t_ff:comb_17|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_18|q ; esc_clk:sai15|t_ff:comb_18|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_19|q ; esc_clk:sai15|t_ff:comb_19|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_20|q ; esc_clk:sai15|t_ff:comb_20|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_21|q ; esc_clk:sai15|t_ff:comb_21|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_22|q ; esc_clk:sai15|t_ff:comb_22|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_23|q ; esc_clk:sai15|t_ff:comb_23|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_24|q ; esc_clk:sai15|t_ff:comb_24|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_25|q ; esc_clk:sai15|t_ff:comb_25|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_26|q ; esc_clk:sai15|t_ff:comb_26|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_27|q ; esc_clk:sai15|t_ff:comb_27|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_28|q ; esc_clk:sai15|t_ff:comb_28|q ; Base ; Constrained ;
+; esc_clk:sai15|t_ff:comb_29|q ; esc_clk:sai15|t_ff:comb_29|q ; Base ; Constrained ;
++------------------------------+------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; bot        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; on_liga    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; segf[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; bot        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; on_liga    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; segf[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 07 01:30:51 2024
+Info: Command: quartus_sta test -c test
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'test.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name deboun:testa_b|t_ff:comb_4|q deboun:testa_b|t_ff:comb_4|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_28|q esc_clk:sai15|t_ff:comb_28|q
+    Info (332105): create_clock -period 1.000 -name conta3:conte3|t_ff:comb_6|q conta3:conte3|t_ff:comb_6|q
+    Info (332105): create_clock -period 1.000 -name conta3:conte3|t_ff:comb_5|q conta3:conte3|t_ff:comb_5|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_19|q esc_clk:sai15|t_ff:comb_19|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_18|q esc_clk:sai15|t_ff:comb_18|q
+    Info (332105): create_clock -period 1.000 -name conta2:conte2|t_ff:comb_5|q conta2:conte2|t_ff:comb_5|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_17|q esc_clk:sai15|t_ff:comb_17|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_20|q esc_clk:sai15|t_ff:comb_20|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_27|q esc_clk:sai15|t_ff:comb_27|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_26|q esc_clk:sai15|t_ff:comb_26|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_29|q esc_clk:sai15|t_ff:comb_29|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_16|q esc_clk:sai15|t_ff:comb_16|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_25|q esc_clk:sai15|t_ff:comb_25|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_15|q esc_clk:sai15|t_ff:comb_15|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_24|q esc_clk:sai15|t_ff:comb_24|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_14|q esc_clk:sai15|t_ff:comb_14|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_23|q esc_clk:sai15|t_ff:comb_23|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_13|q esc_clk:sai15|t_ff:comb_13|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_22|q esc_clk:sai15|t_ff:comb_22|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_12|q esc_clk:sai15|t_ff:comb_12|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_21|q esc_clk:sai15|t_ff:comb_21|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_11|q esc_clk:sai15|t_ff:comb_11|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_10|q esc_clk:sai15|t_ff:comb_10|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_9|q esc_clk:sai15|t_ff:comb_9|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_8|q esc_clk:sai15|t_ff:comb_8|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_7|q esc_clk:sai15|t_ff:comb_7|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_6|q esc_clk:sai15|t_ff:comb_6|q
+    Info (332105): create_clock -period 1.000 -name esc_clk:sai15|t_ff:comb_5|q esc_clk:sai15|t_ff:comb_5|q
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.473
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.473              -1.473 esc_clk:sai15|t_ff:comb_20|q 
+    Info (332119):    -1.453              -1.453 esc_clk:sai15|t_ff:comb_29|q 
+    Info (332119):    -1.194              -1.194 conta2:conte2|t_ff:comb_5|q 
+    Info (332119):    -1.193              -1.193 conta3:conte3|t_ff:comb_6|q 
+    Info (332119):     0.466               0.000 esc_clk:sai15|t_ff:comb_11|q 
+    Info (332119):     0.466               0.000 esc_clk:sai15|t_ff:comb_15|q 
+    Info (332119):     0.466               0.000 esc_clk:sai15|t_ff:comb_21|q 
+    Info (332119):     0.467               0.000 esc_clk:sai15|t_ff:comb_23|q 
+    Info (332119):     0.467               0.000 esc_clk:sai15|t_ff:comb_25|q 
+    Info (332119):     0.467               0.000 esc_clk:sai15|t_ff:comb_7|q 
+    Info (332119):     0.467               0.000 esc_clk:sai15|t_ff:comb_9|q 
+    Info (332119):     0.468               0.000 esc_clk:sai15|t_ff:comb_13|q 
+    Info (332119):     0.469               0.000 esc_clk:sai15|t_ff:comb_18|q 
+    Info (332119):     0.469               0.000 esc_clk:sai15|t_ff:comb_27|q 
+    Info (332119):     0.808               0.000 esc_clk:sai15|t_ff:comb_8|q 
+    Info (332119):     0.819               0.000 esc_clk:sai15|t_ff:comb_24|q 
+    Info (332119):     0.823               0.000 esc_clk:sai15|t_ff:comb_28|q 
+    Info (332119):     0.825               0.000 esc_clk:sai15|t_ff:comb_12|q 
+    Info (332119):     0.825               0.000 esc_clk:sai15|t_ff:comb_22|q 
+    Info (332119):     0.833               0.000 esc_clk:sai15|t_ff:comb_6|q 
+    Info (332119):     0.841               0.000 conta3:conte3|t_ff:comb_5|q 
+    Info (332119):     0.842               0.000 esc_clk:sai15|t_ff:comb_16|q 
+    Info (332119):     1.118               0.000 deboun:testa_b|t_ff:comb_4|q 
+    Info (332119):     1.178               0.000 esc_clk:sai15|t_ff:comb_10|q 
+    Info (332119):     1.213               0.000 esc_clk:sai15|t_ff:comb_14|q 
+    Info (332119):     1.312               0.000 esc_clk:sai15|t_ff:comb_17|q 
+    Info (332119):     1.384               0.000 esc_clk:sai15|t_ff:comb_19|q 
+    Info (332119):     1.569               0.000 esc_clk:sai15|t_ff:comb_5|q 
+    Info (332119):     1.778               0.000 esc_clk:sai15|t_ff:comb_26|q 
+    Info (332119):     2.956               0.000 clk 
+Info (332146): Worst-case hold slack is -4.246
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.246              -4.246 esc_clk:sai15|t_ff:comb_29|q 
+    Info (332119):    -4.143              -5.020 esc_clk:sai15|t_ff:comb_28|q 
+    Info (332119):    -3.582              -3.582 conta2:conte2|t_ff:comb_5|q 
+    Info (332119):    -3.010              -3.010 clk 
+    Info (332119):    -2.360              -6.842 esc_clk:sai15|t_ff:comb_20|q 
+    Info (332119):    -1.832              -1.832 esc_clk:sai15|t_ff:comb_26|q 
+    Info (332119):    -1.623              -1.623 esc_clk:sai15|t_ff:comb_5|q 
+    Info (332119):    -1.438              -1.438 esc_clk:sai15|t_ff:comb_19|q 
+    Info (332119):    -1.366              -1.366 esc_clk:sai15|t_ff:comb_17|q 
+    Info (332119):    -1.267              -1.267 esc_clk:sai15|t_ff:comb_14|q 
+    Info (332119):    -1.232              -1.232 esc_clk:sai15|t_ff:comb_10|q 
+    Info (332119):    -1.172              -1.172 deboun:testa_b|t_ff:comb_4|q 
+    Info (332119):    -0.896              -0.896 esc_clk:sai15|t_ff:comb_16|q 
+    Info (332119):    -0.895              -0.895 conta3:conte3|t_ff:comb_5|q 
+    Info (332119):    -0.887              -0.887 esc_clk:sai15|t_ff:comb_6|q 
+    Info (332119):    -0.879              -0.879 esc_clk:sai15|t_ff:comb_12|q 
+    Info (332119):    -0.879              -0.879 esc_clk:sai15|t_ff:comb_22|q 
+    Info (332119):    -0.873              -0.873 esc_clk:sai15|t_ff:comb_24|q 
+    Info (332119):    -0.862              -0.862 esc_clk:sai15|t_ff:comb_8|q 
+    Info (332119):    -0.523              -0.523 esc_clk:sai15|t_ff:comb_18|q 
+    Info (332119):    -0.523              -0.523 esc_clk:sai15|t_ff:comb_27|q 
+    Info (332119):    -0.522              -0.522 esc_clk:sai15|t_ff:comb_13|q 
+    Info (332119):    -0.521              -0.521 esc_clk:sai15|t_ff:comb_23|q 
+    Info (332119):    -0.521              -0.521 esc_clk:sai15|t_ff:comb_25|q 
+    Info (332119):    -0.521              -0.521 esc_clk:sai15|t_ff:comb_7|q 
+    Info (332119):    -0.521              -0.521 esc_clk:sai15|t_ff:comb_9|q 
+    Info (332119):    -0.520              -0.520 esc_clk:sai15|t_ff:comb_11|q 
+    Info (332119):    -0.520              -0.520 esc_clk:sai15|t_ff:comb_15|q 
+    Info (332119):    -0.520              -0.520 esc_clk:sai15|t_ff:comb_21|q 
+    Info (332119):     1.639               0.000 conta3:conte3|t_ff:comb_6|q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):    -0.170              -0.340 conta2:conte2|t_ff:comb_5|q 
+    Info (332119):     0.234               0.000 conta3:conte3|t_ff:comb_5|q 
+    Info (332119):     0.234               0.000 conta3:conte3|t_ff:comb_6|q 
+    Info (332119):     0.234               0.000 deboun:testa_b|t_ff:comb_4|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_10|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_11|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_12|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_13|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_14|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_15|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_16|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_17|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_18|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_19|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_20|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_21|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_22|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_23|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_24|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_25|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_26|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_27|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_28|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_29|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_5|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_6|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_7|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_8|q 
+    Info (332119):     0.234               0.000 esc_clk:sai15|t_ff:comb_9|q 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4733 megabytes
+    Info: Processing ended: Thu Nov 07 01:30:52 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

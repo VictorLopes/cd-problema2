@@ -1,0 +1,16 @@
+module demux_01(
+	input D, E,
+	output Q
+);
+
+not(ND, D);
+not(NE, E);
+
+and(S1, ND, NE);
+and(S2, D, NE);
+and(S3, ND, E);
+and(S4, D, E);
+
+or(Q, S1, S2, S3, S4);
+
+endmodule

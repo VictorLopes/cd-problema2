@@ -1,0 +1,427 @@
+|main_p
+on_liga => comb.IN1
+clk => clk.IN1
+bot => bot.IN1
+segf[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segf[1] <= <GND>
+segf[2] <= <GND>
+segf[3] <= <GND>
+segf[4] <= <GND>
+segf[5] <= <GND>
+segf[6] <= <GND>
+segf[7] <= <GND>
+segf[8] <= <GND>
+segf[9] <= <GND>
+segf[10] <= <GND>
+segf[11] <= <GND>
+
+
+|main_p|esc_clk:sai15
+clk => clk.IN1
+Q15 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q23 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q24 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q25 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_5
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_6
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_7
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_8
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_9
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_10
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_11
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_12
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_13
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_14
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_15
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_16
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_17
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_18
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_19
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_20
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_21
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_22
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_23
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_24
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_25
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_26
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_27
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_28
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_29
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|esc_clk:sai15|t_ff:comb_30
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|deboun:testa_b
+clk => clk.IN2
+bot => bot.IN1
+Q <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|deboun:testa_b|t_ff:comb_4
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|deboun:testa_b|t_ff:comb_5
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta2:conte2
+clk => clk.IN1
+Q1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta2:conte2|t_ff:comb_5
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta2:conte2|t_ff:comb_6
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|demux_01:mude
+D => S2.IN0
+D => S4.IN0
+D => S1.IN0
+D => S3.IN0
+E => S3.IN1
+E => S4.IN1
+E => S1.IN1
+E => S2.IN1
+Q23 => T2.IN1
+Q24 => T3.IN1
+Q25 => T4.IN1
+Q <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta3:conte3
+clk => clk.IN1
+Q1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta3:conte3|t_ff:comb_5
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta3:conte3|t_ff:comb_6
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|conta3:conte3|t_ff:comb_7
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_p|out07seg:temp
+A => WideAnd2.IN0
+A => WideOr1.IN0
+A => WideAnd0.IN0
+A => WideAnd1.IN0
+A => orA2.IN0
+A => orB2.IN0
+A => comb.IN0
+A => WideAnd3.IN0
+A => orA6.IN0
+A => orC6.IN0
+B => WideAnd1.IN1
+B => WideOr1.IN1
+B => orB2.IN1
+B => orC2.IN0
+B => orA6.IN1
+B => orB6.IN0
+B => WideAnd0.IN1
+B => WideAnd2.IN1
+B => comb.IN1
+B => comb.IN0
+B => WideAnd3.IN1
+C => WideAnd1.IN2
+C => WideAnd2.IN2
+C => orC2.IN1
+C => WideAnd0.IN2
+C => WideOr1.IN2
+C => orA2.IN1
+C => comb.IN1
+C => WideAnd3.IN2
+C => orB6.IN1
+C => orC6.IN1
+segs[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segs[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+segs[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segs[7] <= <VCC>
+segs[8] <= <GND>
+segs[9] <= <VCC>
+segs[10] <= <VCC>
+segs[11] <= <VCC>
+
+
+|main_p|out17seg:acao
+D => comb.IN0
+D => comb.IN0
+D => comb.IN0
+D => comb.IN0
+D => comb.IN0
+D => comb.IN0
+E => comb.IN1
+E => comb.IN1
+E => comb.IN1
+E => comb.IN1
+E => comb.IN1
+E => comb.IN1
+segs[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= <GND>
+segs[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+segs[7] <= <VCC>
+segs[8] <= <VCC>
+segs[9] <= <VCC>
+segs[10] <= <VCC>
+segs[11] <= <GND>
+
+
+|main_p|mux_01:multiplexa
+seg0[0] => acao[0].IN0
+seg0[1] => acao[1].IN0
+seg0[2] => acao[2].IN0
+seg0[3] => acao[3].IN0
+seg0[4] => acao[4].IN0
+seg0[5] => acao[5].IN0
+seg0[6] => acao[6].IN0
+seg0[7] => acao[7].IN0
+seg0[8] => acao[8].IN0
+seg0[9] => acao[9].IN0
+seg0[10] => acao[10].IN0
+seg0[11] => acao[11].IN0
+seg1[0] => temp[0].IN0
+seg1[1] => temp[1].IN0
+seg1[2] => temp[2].IN0
+seg1[3] => temp[3].IN0
+seg1[4] => temp[4].IN0
+seg1[5] => temp[5].IN0
+seg1[6] => temp[6].IN0
+seg1[7] => temp[7].IN0
+seg1[8] => temp[8].IN0
+seg1[9] => temp[9].IN0
+seg1[10] => temp[10].IN0
+seg1[11] => temp[11].IN0
+clk => acao[0].IN1
+clk => acao[1].IN1
+clk => acao[2].IN1
+clk => acao[3].IN1
+clk => acao[4].IN1
+clk => acao[5].IN1
+clk => acao[6].IN1
+clk => acao[7].IN1
+clk => acao[8].IN1
+clk => acao[9].IN1
+clk => acao[10].IN1
+clk => acao[11].IN1
+clk => temp[0].IN1
+clk => temp[1].IN1
+clk => temp[2].IN1
+clk => temp[3].IN1
+clk => temp[4].IN1
+clk => temp[5].IN1
+clk => temp[6].IN1
+clk => temp[7].IN1
+clk => temp[8].IN1
+clk => temp[9].IN1
+clk => temp[10].IN1
+clk => temp[11].IN1
+seg_fin[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[8] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[9] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[10] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+seg_fin[11] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

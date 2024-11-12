@@ -1,0 +1,415 @@
+Analysis & Synthesis report for test
+Thu Nov 07 01:30:48 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "mux_01:multiplexa"
+ 10. Analysis & Synthesis Messages
+ 11. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Nov 07 01:30:48 2024       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; test                                        ;
+; Top-level Entity Name       ; main_p                                      ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 39                                          ;
+; Total pins                  ; 15                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; main_p             ; test               ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+; esc_clk.v                        ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/esc_clk.v  ;         ;
+; mux_01.v                         ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/mux_01.v   ;         ;
+; out07seg.v                       ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/out07seg.v ;         ;
+; out17seg.v                       ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/out17seg.v ;         ;
+; t_ff.v                           ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/t_ff.v     ;         ;
+; conta3.v                         ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/conta3.v   ;         ;
+; conta2.v                         ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/conta2.v   ;         ;
+; deboun.v                         ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/deboun.v   ;         ;
+; main_p.v                         ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/main_p.v   ;         ;
+; demux_01.v                       ; yes             ; User Verilog HDL File  ; C:/Users/lipes/Desktop/Nova0/demux_01.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Total logic elements                        ; 39                           ;
+;     -- Combinational with no register       ; 6                            ;
+;     -- Register only                        ; 0                            ;
+;     -- Combinational with a register        ; 33                           ;
+;                                             ;                              ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 3                            ;
+;     -- 3 input functions                    ; 2                            ;
+;     -- 2 input functions                    ; 3                            ;
+;     -- 1 input functions                    ; 31                           ;
+;     -- 0 input functions                    ; 0                            ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 39                           ;
+;     -- arithmetic mode                      ; 0                            ;
+;     -- qfbk mode                            ; 0                            ;
+;     -- register cascade mode                ; 0                            ;
+;     -- synchronous clear/load mode          ; 0                            ;
+;     -- asynchronous clear/load mode         ; 0                            ;
+;                                             ;                              ;
+; Total registers                             ; 33                           ;
+; I/O pins                                    ; 15                           ;
+; Maximum fan-out node                        ; esc_clk:sai15|t_ff:comb_20|q ;
+; Maximum fan-out                             ; 6                            ;
+; Total fan-out                               ; 89                           ;
+; Average fan-out                             ; 1.65                         ;
++---------------------------------------------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-------------+--------------+
+; |main_p                    ; 39 (3)      ; 33           ; 0          ; 15   ; 0            ; 6 (3)        ; 0 (0)             ; 33 (0)           ; 0 (0)           ; 0 (0)      ; |main_p                            ; main_p      ; work         ;
+;    |conta2:conte2|         ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main_p|conta2:conte2              ; conta2      ; work         ;
+;       |t_ff:comb_5|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|conta2:conte2|t_ff:comb_5  ; t_ff        ; work         ;
+;       |t_ff:comb_6|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|conta2:conte2|t_ff:comb_6  ; t_ff        ; work         ;
+;    |conta3:conte3|         ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |main_p|conta3:conte3              ; conta3      ; work         ;
+;       |t_ff:comb_5|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|conta3:conte3|t_ff:comb_5  ; t_ff        ; work         ;
+;       |t_ff:comb_6|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|conta3:conte3|t_ff:comb_6  ; t_ff        ; work         ;
+;       |t_ff:comb_7|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|conta3:conte3|t_ff:comb_7  ; t_ff        ; work         ;
+;    |deboun:testa_b|        ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main_p|deboun:testa_b             ; deboun      ; work         ;
+;       |t_ff:comb_4|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|deboun:testa_b|t_ff:comb_4 ; t_ff        ; work         ;
+;       |t_ff:comb_5|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|deboun:testa_b|t_ff:comb_5 ; t_ff        ; work         ;
+;    |demux_01:mude|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_p|demux_01:mude              ; demux_01    ; work         ;
+;    |esc_clk:sai15|         ; 26 (0)      ; 26           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 26 (0)           ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15              ; esc_clk     ; work         ;
+;       |t_ff:comb_10|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_10 ; t_ff        ; work         ;
+;       |t_ff:comb_11|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_11 ; t_ff        ; work         ;
+;       |t_ff:comb_12|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_12 ; t_ff        ; work         ;
+;       |t_ff:comb_13|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_13 ; t_ff        ; work         ;
+;       |t_ff:comb_14|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_14 ; t_ff        ; work         ;
+;       |t_ff:comb_15|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_15 ; t_ff        ; work         ;
+;       |t_ff:comb_16|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_16 ; t_ff        ; work         ;
+;       |t_ff:comb_17|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_17 ; t_ff        ; work         ;
+;       |t_ff:comb_18|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_18 ; t_ff        ; work         ;
+;       |t_ff:comb_19|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_19 ; t_ff        ; work         ;
+;       |t_ff:comb_20|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_20 ; t_ff        ; work         ;
+;       |t_ff:comb_21|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_21 ; t_ff        ; work         ;
+;       |t_ff:comb_22|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_22 ; t_ff        ; work         ;
+;       |t_ff:comb_23|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_23 ; t_ff        ; work         ;
+;       |t_ff:comb_24|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_24 ; t_ff        ; work         ;
+;       |t_ff:comb_25|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_25 ; t_ff        ; work         ;
+;       |t_ff:comb_26|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_26 ; t_ff        ; work         ;
+;       |t_ff:comb_27|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_27 ; t_ff        ; work         ;
+;       |t_ff:comb_28|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_28 ; t_ff        ; work         ;
+;       |t_ff:comb_29|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_29 ; t_ff        ; work         ;
+;       |t_ff:comb_30|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_30 ; t_ff        ; work         ;
+;       |t_ff:comb_5|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_5  ; t_ff        ; work         ;
+;       |t_ff:comb_6|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_6  ; t_ff        ; work         ;
+;       |t_ff:comb_7|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_7  ; t_ff        ; work         ;
+;       |t_ff:comb_8|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_8  ; t_ff        ; work         ;
+;       |t_ff:comb_9|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main_p|esc_clk:sai15|t_ff:comb_9  ; t_ff        ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_01:multiplexa"                                                                                                              ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                      ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; seg_fin ; Output ; Warning  ; Output or bidir port (12 bits) is wider than the port expression (1 bits) it drives; bit(s) "seg_fin[11..1]" have no fanouts ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 07 01:30:43 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file esc_clk.v
+    Info (12023): Found entity 1: esc_clk File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_01.v
+    Info (12023): Found entity 1: mux_01 File: C:/Users/lipes/Desktop/Nova0/mux_01.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file out07seg.v
+    Info (12023): Found entity 1: out07seg File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file out17seg.v
+    Info (12023): Found entity 1: out17seg File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t_ff.v
+    Info (12023): Found entity 1: t_ff File: C:/Users/lipes/Desktop/Nova0/t_ff.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conta3.v
+    Info (12023): Found entity 1: conta3 File: C:/Users/lipes/Desktop/Nova0/conta3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conta2.v
+    Info (12023): Found entity 1: conta2 File: C:/Users/lipes/Desktop/Nova0/conta2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file deboun.v
+    Info (12023): Found entity 1: deboun File: C:/Users/lipes/Desktop/Nova0/deboun.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file main_p.v
+    Info (12023): Found entity 1: main_p File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux_01.v
+    Info (12023): Found entity 1: demux_01 File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at out07seg.v(10): created implicit net for "NA" File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at out07seg.v(11): created implicit net for "NB" File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at out07seg.v(12): created implicit net for "NC" File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at out17seg.v(10): created implicit net for "ND" File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at out17seg.v(11): created implicit net for "NE" File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at deboun.v(13): created implicit net for "Nq1" File: C:/Users/lipes/Desktop/Nova0/deboun.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(10): created implicit net for "Q15" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(10): created implicit net for "Q23" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(10): created implicit net for "Q24" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(10): created implicit net for "Q25" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(12): created implicit net for "pul" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(14): created implicit net for "D" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(14): created implicit net for "E" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(16): created implicit net for "Q" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(18): created implicit net for "A" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(18): created implicit net for "B" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(18): created implicit net for "C" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at main_p.v(23): created implicit net for "seg" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(7): created implicit net for "ND" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(8): created implicit net for "NE" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(10): created implicit net for "S1" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(11): created implicit net for "S2" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(12): created implicit net for "S3" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(13): created implicit net for "S4" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(15): created implicit net for "T1" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(16): created implicit net for "T2" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(17): created implicit net for "T3" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at demux_01.v(18): created implicit net for "T4" File: C:/Users/lipes/Desktop/Nova0/demux_01.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(15): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(16): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(17): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(18): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(19): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(21): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(22): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(23): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(24): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(25): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(27): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(28): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(29): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(30): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(31): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(33): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(34): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(35): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(36): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(37): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 37
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(39): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(40): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(41): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 41
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(42): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 42
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(43): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 43
+Critical Warning (10846): Verilog HDL Instantiation warning at esc_clk.v(45): instance has no name File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 45
+Critical Warning (10846): Verilog HDL Instantiation warning at conta3.v(13): instance has no name File: C:/Users/lipes/Desktop/Nova0/conta3.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at conta3.v(14): instance has no name File: C:/Users/lipes/Desktop/Nova0/conta3.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at conta3.v(15): instance has no name File: C:/Users/lipes/Desktop/Nova0/conta3.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at conta2.v(11): instance has no name File: C:/Users/lipes/Desktop/Nova0/conta2.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at conta2.v(12): instance has no name File: C:/Users/lipes/Desktop/Nova0/conta2.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at deboun.v(10): instance has no name File: C:/Users/lipes/Desktop/Nova0/deboun.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at deboun.v(11): instance has no name File: C:/Users/lipes/Desktop/Nova0/deboun.v Line: 11
+Info (12127): Elaborating entity "main_p" for the top level hierarchy
+Warning (10739): Verilog HDL warning at main_p.v(25): actual bit length 12 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 25
+Warning (10034): Output port "segf[11..1]" at main_p.v(6) has no driver File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+Info (12128): Elaborating entity "esc_clk" for hierarchy "esc_clk:sai15" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 10
+Info (12128): Elaborating entity "t_ff" for hierarchy "esc_clk:sai15|t_ff:comb_5" File: C:/Users/lipes/Desktop/Nova0/esc_clk.v Line: 15
+Info (12128): Elaborating entity "deboun" for hierarchy "deboun:testa_b" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 12
+Info (12128): Elaborating entity "conta2" for hierarchy "conta2:conte2" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 14
+Info (12128): Elaborating entity "demux_01" for hierarchy "demux_01:mude" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 16
+Info (12128): Elaborating entity "conta3" for hierarchy "conta3:conte3" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 18
+Info (12128): Elaborating entity "out07seg" for hierarchy "out07seg:temp" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 20
+Warning (10739): Verilog HDL warning at out07seg.v(57): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 57
+Warning (10739): Verilog HDL warning at out07seg.v(60): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 60
+Warning (10739): Verilog HDL warning at out07seg.v(62): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 62
+Warning (10739): Verilog HDL warning at out07seg.v(64): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 64
+Warning (10739): Verilog HDL warning at out07seg.v(66): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out07seg.v Line: 66
+Info (12128): Elaborating entity "out17seg" for hierarchy "out17seg:acao" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 21
+Warning (10739): Verilog HDL warning at out17seg.v(19): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 19
+Warning (10739): Verilog HDL warning at out17seg.v(43): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 43
+Warning (10739): Verilog HDL warning at out17seg.v(46): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 46
+Warning (10739): Verilog HDL warning at out17seg.v(48): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 48
+Warning (10739): Verilog HDL warning at out17seg.v(50): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 50
+Warning (10739): Verilog HDL warning at out17seg.v(52): actual bit length 32 differs from formal bit length 1 File: C:/Users/lipes/Desktop/Nova0/out17seg.v Line: 52
+Info (12128): Elaborating entity "mux_01" for hierarchy "mux_01:multiplexa" File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 23
+Info (13014): Ignored 9 buffer(s)
+    Info (13019): Ignored 9 SOFT buffer(s)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "segf[1]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[2]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[3]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[4]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[5]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[6]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[7]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[8]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[9]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[10]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+    Warning (13410): Pin "segf[11]" is stuck at GND File: C:/Users/lipes/Desktop/Nova0/main_p.v Line: 6
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 39 logic cells
+Info (144001): Generated suppressed messages file C:/Users/lipes/Desktop/Nova0/output_files/test.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Thu Nov 07 01:30:48 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/lipes/Desktop/Nova0/output_files/test.map.smsg.
+
+

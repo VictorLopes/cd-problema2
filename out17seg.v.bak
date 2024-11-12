@@ -1,0 +1,54 @@
+module out17seg(D, E, segs[11:0]);
+	input D;
+	input E;
+	
+	// output segA, segB, segC, segD, segE, segF, segG, segH, segI, des4, des5, des6;
+	// de 0 a 6, os 7 segmentos 
+	// 7 display 1
+	// 8 ponto
+	// de 9 a 11, display 2, 3 e 4 respectivamente
+	output [11:0] segs;
+	
+// saida A
+
+	and(segs[0], D,~E);
+	
+// saida B
+
+	not(segs[1], 1);
+	
+// saida C
+
+	and(segs[2], ~D,E);
+	
+// saida D
+
+   and(segs[3], D, ~E);
+	
+// saida E
+
+   and(segs[4], D, ~E);
+	
+// saida F
+
+	and(segs[5], ~D,E);
+
+// saida G
+
+	and(segs[6], ~D,~E);
+	
+// saida H display 1
+
+	not(segs[7], 0);
+
+// saida I
+
+	not(segs[8], 0);
+	
+// dsplay 2, 3 e 4 em ordem
+
+	not (segs[9], 0);
+	not (segs[10], 0);
+	not (segs[11], 1);
+	
+endmodule
